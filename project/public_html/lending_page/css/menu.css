@@ -1,0 +1,58 @@
+.menu {
+  width: 942px;
+  height: 38px;
+  text-align: center;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 52.6px;
+}
+.menu .header-logo .cho {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .header-logo .cco {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .header-pagination {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 641px;
+  align-content: center;
+}
+.menu .header-pagination .header-pagination__item {
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  z-index: 100;
+}
+.menu .header-phone {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.menu .header-phone .header-phone__image {
+  z-index: 100;
+}
+.menu .header-phone .header-phone__number {
+  margin-left: 6.07px;
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 22px;
+  line-height: 18px;
+  z-index: 100;
+}
