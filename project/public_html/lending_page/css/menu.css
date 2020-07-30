@@ -35,7 +35,7 @@
 }
 .menu .header-pagination .header-pagination__item {
   color: white;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-size: 18px;
   line-height: 30px;
   z-index: 100;
@@ -51,7 +51,7 @@
 .menu .header-phone .header-phone__number {
   margin-left: 6.07px;
   color: white;
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: "Alegreya Sans", sans-serif;
   font-size: 22px;
   line-height: 18px;
   z-index: 100;

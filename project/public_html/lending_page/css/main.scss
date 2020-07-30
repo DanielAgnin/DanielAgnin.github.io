@@ -113,3 +113,97 @@ p {
     z-index: 20;
     background-image: url(../images/leaf_2.svg);
 }
+
+/*Стили для блока второй секции*/
+
+.section-2 {
+    height: 652px;
+    background-color: white;
+    background-size: cover;
+}
+
+.raspberry {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 350px;
+    width: 158px;
+    height: 315px;
+    z-index: 10;
+    background-image: url(../images/raspberry.svg);
+}
+
+.title-block {
+    margin-top: 100px;
+    text-align: center;
+
+    .title-block__title {
+        color: #292929;
+        font-family: 'Alegreya Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .title-block__desc {
+        color: #666666;
+        font-family: 'Alegreya Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 19px;
+    }
+}
+
+.product-features-list {
+    margin-top: 49px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .product-features-list__item {
+        text-align: center;
+
+        .product-features-list__item_picture-block {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+
+            .product-features-list__item_picture-block_backgound {
+                height: 128px;
+                width: 128px;
+                border-radius: 100px;
+                background-color: #F2F5F4;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: center;
+            }
+        }
+
+        .product-features-list__item_text-block {
+            display: flex;
+            flex-direction: column;
+
+            .product-features-list__item_text-block_title {
+                font-family: 'Alegreya Sans', sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 27px;
+                line-height: 32px;
+                color: #292929;
+                margin-bottom: 18px;
+            }
+
+            .product-features-list__item_text-block_paragraph {
+                font-family: 'Alegreya Sans', sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 22px;
+                color: #666666;
+            }
+        }
+    }
+}
