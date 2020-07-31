@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*Стили для блока "headline"*/
+.headline {
+  margin-top: 100px;
+  text-align: center;
+}
+.headline .headline__title {
+  color: #292929;
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+}
+.headline .headline__subtitle {
+  color: #666666;
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 5px;
+}

@@ -10,18 +10,13 @@
     <div class="wrapper">
 
         <!--Приветственная секция-->
-        <div class="section-1">
+        <section class="hero">
 
-            <div class="container">
-
-            <!--Картинки, накладывающиеся на фон-->
-            <div class="pattern_1"></div>
-            <div class="chocolate"></div>
-            <div class="leaf_2"></div>
+            <div class="container hero__container">
 
             <!--Верхнее меню-->
             <header class="menu">
-                <div class="header-logo">
+                <a href="#" class="header-logo">
                     <div class="cho">
                         <img src="../images/letter_c.svg" alt="c" class="letter-c">
                         <img src="../images/letter_h.svg" alt="h" class="letter-h">
@@ -32,27 +27,27 @@
                         <img src="../images/letter_c.svg" alt="c" class="letter-c">
                         <img src="../images/letter_o.svg" alt="o" class="letter-o">
                     </div>
-                </div>
-                <nav class="header-pagination">
-                    <a href="#" class="header-pagination__item">
+                </a>
+                <nav class="header-list">
+                    <a href="#" class="header-list__item">
                         О нас
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Батончики
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Команда
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Меню
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Отзывы
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Как мы работаем
                     </a>
-                    <a href="#" class="header-pagination__item">
+                    <a href="#" class="header-list__item">
                         Контакты
                     </a>
                 </nav>
@@ -80,7 +75,7 @@
             <!--Блок для описания преимуществ продукта-->
             <ul class="product-advantages">
                 <li class="product-advantages-item">
-                    <img src="../images/leaf_1.svg" alt="leaf" class="product-advantages-item__image">
+                    <img src="../images/leaf_1.svg" alt="leaf" class="product-advantages-item__image leaf">
                     <p class="product-advantages-item__text">
                         100% <br class="br">
                         натуральный <br class="br">
@@ -88,7 +83,7 @@
                     </p>
                 </li>
                 <li class="product-advantages-item">
-                    <img src="../images/truck.svg" alt="truck" class="product-advantages-item__image">
+                    <img src="../images/truck.svg" alt="truck" class="product-advantages-item__image truck">
                     <p class="product-advantages-item__text">
                         3-5 дней <br class="br">
                         доставка <br class="br">
@@ -96,7 +91,7 @@
                     </p>
                 </li>
                 <li class="product-advantages-item">
-                    <img src="../images/ruler.svg" alt="ruler" class="product-advantages-item__image">
+                    <img src="../images/ruler.svg" alt="ruler" class="product-advantages-item__image ruler">
                     <p class="product-advantages-item__text">
                         Не портит <br class="br">
                         фигуру
@@ -105,70 +100,69 @@
             </ul>
 
             </div>
-        </div>
+        </section>
 
         <!--Секция "Почему Chocco"-->
-        <div class="section-2">
-            <div class="container">
+        <section class="section why">
 
-                <!--Картинки, накладывающиеся на фон-->
-                <div class="raspberry"></div>
+            <div class="container why__container">
 
-                <div class="title-block">
-                    <h1 class="title-block__title">
+                <div class="headline">
+                    <h1 class="section-title headline__title">
                         ПОЧЕМУ CHOCCO?
                     </h1>
-                    <div class="title-block__desc">
+                    <div class="headline__subtitle">
                         В нашем мире все происходит очень быстро, поэтому мы<br class="br">
                         делаем батончики, которые удобно взять с собой.
                     </div>
                 </div>
-                <ul class="product-features-list">
-                    <li class="product-features-list__item">
-                        <div class="product-features-list__item_picture-block">
-                            <div class="product-features-list__item_picture-block_backgound">
-                                <img src="../images/helpful_image.svg" alt="helpful" class="product-features-list__item_picture-block_image helpful">
+
+                <ul class="benefits-list">
+                    <li class="benefits-list__item">
+                        <div class="benefits-list__item_picture-block">
+                            <div class="benefits-list__item_picture-block_backgound">
+                                <img src="../images/helpful_image.svg" alt="helpful" class="benefits-list__item_picture-block_image helpful">
                             </div>
                         </div>
-                        <section class="product-features-list__item_text-block">
-                            <h2 class="product-features-list__item_text-block_title helpful">
+                        <section class="benefits-list__item_text-block">
+                            <h2 class="benefits-list__item_text-block_title helpful">
                                 Полезно
                             </h2>
-                            <p class="product-features-list__item_text-block_paragraph helpful">
+                            <p">
                                 Натуральность - ключевое качество <br class="br">
                                 нашей продукции. Мы используем <br class="br">
                                 только природные ингредиенты.
                             </p>
                         </section>
                     </li>
-                    <li class="product-features-list__item">
-                        <div class="product-features-list__item_picture-block">
-                            <div class="product-features-list__item_picture-block_backgound">
-                                <img src="../images/tasty_image.svg" alt="tasty" class="product-features-list__item_picture-block_image tasty">
+                    <li class="benefits-list__item">
+                        <div class="benefits-list__item_picture-block">
+                            <div class="benefits-list__item_picture-block_backgound">
+                                <img src="../images/tasty_image.svg" alt="tasty" class="benefits-list__item_picture-block_image tasty">
                             </div>
                         </div>
-                        <section class="product-features-list__item_text-block">
-                            <h2 class="product-features-list__item_text-block_title tasty">
+                        <section class="benefits-list__item_text-block">
+                            <h2 class="benefits-list__item_text-block_title tasty">
                                 Вкусно
                             </h2>
-                            <p class="product-features-list__item_text-block_paragraph tasty">
+                            <p>
                                 Нежный, ненавязчивый, изысканный – <br class="br">
                                 так клиенты описывают вкусовые <br class="br">
                                 качества наших батончиков.
                             </p>
                         </section>
                     </li>
-                    <li class="product-features-list__item">
-                        <div class="product-features-list__item_picture-block">
-                            <div class="product-features-list__item_picture-block_backgound">
-                                <img src="../images/nutritious_image.svg" alt="nutritionally" class="product-features-list__item_picture-block_image nutritionally">
+                    <li class="benefits-list__item">
+                        <div class="benefits-list__item_picture-block">
+                            <div class="benefits-list__item_picture-block_backgound">
+                                <img src="../images/nutritious_image.svg" alt="nutritionally" class="benefits-list__item_picture-block_image nutritionally">
                             </div>
                         </div>
-                        <section class="product-features-list__item_text-block">
-                            <h2 class="product-features-list__item_text-block_title nutritionally">
+                        <section class="benefits-list__item_text-block">
+                            <h2 class="benefits-list__item_text-block_title nutritionally">
                                 Питательно
                             </h2>
-                            <p class="product-features-list__item_text-block_paragraph nutritionally">
+                            <p>
                                 Высокое содержание качественного <br class="br">
                                 белка, а также всех необходимых <br class="br">
                                 витаминов и минералов.
@@ -176,8 +170,11 @@
                         </section>
                     </li>
                 </ul>
+
             </div>
-        </div>
+
+        </section>
+
     </div>
 </body>
 </html>
