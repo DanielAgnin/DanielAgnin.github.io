@@ -71,3 +71,112 @@ p {
   height: 100vh;
   min-height: 650px;
 }
+
+.section-title {
+  color: #292929;
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.reviews {
+  position: relative;
+  background: url(../images/berries_3.svg) top 22% right 22% no-repeat;
+}
+.reviews:before {
+  content: url(../images/berries_4.svg);
+  position: absolute;
+  bottom: -8%;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviews-container .reviews__title {
+  margin-bottom: 37px;
+}
+.reviews-container .reviews-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 940px;
+  height: 440px;
+  position: relative;
+}
+.reviews-container .reviews-block:before {
+  content: url(../images/pattern_2.svg);
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+.reviews-container .reviews-block .reviews-display {
+  height: 348px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: #F8FAF9;
+}
+.reviews-container .reviews-block .reviews-display .reviews-display__avatar {
+  margin-right: 23px;
+  margin-left: 42px;
+  height: 264px;
+  width: 253px;
+}
+.reviews-container .reviews-block .reviews-display .reviews-display__review {
+  display: flex;
+  flex-direction: column;
+}
+.reviews-container .reviews-block .reviews-display .reviews-display__review .review__title {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  color: #292929;
+  margin-top: 15px;
+}
+.reviews-container .reviews-block .reviews-display .reviews-display__review .review__text {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: .reviews-container .reviews-block .reviews-display .reviews-display__review .review__text 18px;
+  line-height: 22px;
+  color: #666666;
+  margin-top: 22px;
+}
+.reviews-container .reviews-block .reviews-display .reviews-display__review .review__name {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: .reviews-container .reviews-block .reviews-display .reviews-display__review .review__name 18px;
+  line-height: 24px;
+  color: #292929;
+  margin-top: 25px;
+}
+.reviews-container .reviews-block .reviews-switcher {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 20px;
+}
+.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item {
+  margin-right: 6px;
+}
+.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item:last-child {
+  margin-right: 0;
+}
+.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image {
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+}
+.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image.active {
+  box-sizing: border-box;
+  border: 4px solid #365A49;
+}

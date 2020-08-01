@@ -1,0 +1,52 @@
+
+    
+        .reviews-display {
+            height: 348px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+            background-color: #F8FAF9;
+    
+            .reviews-display__avatar {
+                margin-right: 23px;
+                margin-left: 42px;
+                height: 264px;
+                width: 253px;
+            }
+    
+            .reviews-display__review {
+                display: flex;
+                flex-direction: column;
+    
+                .review__title {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 28px;
+                    line-height: 32px;
+                    color: #292929;
+                    margin-top: 15px;
+                }
+    
+                .review__text {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: &$baseFontSize;
+                    line-height: 22px;
+                    color: #666666;
+                    margin-top: 22px;
+                }
+    
+                .review__name {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: &$baseFontSize;
+                    line-height: 24px;
+                    color: #292929;
+                    margin-top: 25px;
+                }
+            }
+        }

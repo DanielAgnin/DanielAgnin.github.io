@@ -20,6 +20,8 @@ $darkGreen: #0b4d3c;  /*Базовый тёмно-зелёный цвет*/
 
 @import url("../css/hero_section/main_styles/hero.css");
 @import url("../css/why_section/main_styles/why.css");
+@import url("../css/reviews_section/main_styles/reviews.scss");
+
 
 /*Базовые стили для всей страницы*/
 
@@ -84,3 +86,14 @@ p {
     height: 100vh;
     min-height: 650px;
 }
+
+.section-title {
+    color: #292929;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+}
+
