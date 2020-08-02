@@ -1,0 +1,21 @@
+.reviews-switcher {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 20px;
+}
+.reviews-switcher .rewiews-switcher__item {
+  margin-right: 6px;
+}
+.reviews-switcher .rewiews-switcher__item:last-child {
+  margin-right: 0;
+}
+.reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image {
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+}
+.reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image.active {
+  box-sizing: border-box;
+  border: 4px solid #365A49;
+}

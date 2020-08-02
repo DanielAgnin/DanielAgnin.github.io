@@ -10,6 +10,10 @@
 /*Подключение стилей секций*/
 @import url("../css/hero_section/main_styles/hero.css");
 @import url("../css/why_section/main_styles/why.css");
+@import url("../css/reviews_section/main_styles/reviews.css");
+@import url("../css/order_section/main_styles/form.css");
+/*Подключение стилей для фиксированного меню*/
+@import url("fixed_menu.css");
 /*Базовые стили для всей страницы*/
 html,
 body {
@@ -72,6 +76,11 @@ p {
   min-height: 650px;
 }
 
+.section--font-color--green {
+  color: #0b4d3c;
+  font-family: "Alegreya Sans";
+}
+
 .section-title {
   color: #292929;
   font-family: "Alegreya Sans";
@@ -82,101 +91,69 @@ p {
   text-align: center;
 }
 
-.reviews {
-  position: relative;
-  background: url(../images/berries_3.svg) top 22% right 22% no-repeat;
+.order-button {
+  width: 156px;
+  height: 60px;
+  border-radius: 100px;
+  margin-top: 32px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;
+  border: none;
 }
-.reviews:before {
-  content: url(../images/berries_4.svg);
-  position: absolute;
-  bottom: -8%;
+.order-button--theme--white {
+  background-color: white;
+  color: #0b4d3c;
+}
+.order-button--theme--white:hover {
+  background-color: #0b4d3c;
+  color: white;
+  transition: 0.2s;
+}
+.order-button--theme--green {
+  background-color: #0b4d3c;
+  color: white;
+}
+.order-button--theme--green:hover {
+  background-color: white;
+  color: #0b4d3c;
+  transition: 0.2s;
+}
+.order-button--theme--transparent {
+  background-color: transparent;
+  color: black;
+  text-transform: none;
+  width: 130px;
+}
+.order-button--theme--transparent:hover {
+  color: #0b4d3c;
+  transition: 0.2s;
 }
 
-.reviews-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.reviews-container .reviews__title {
-  margin-bottom: 37px;
-}
-.reviews-container .reviews-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 940px;
-  height: 440px;
+.order-section {
+  background-image: url(../images/pattern_3.png);
+  background-size: cover;
   position: relative;
 }
-.reviews-container .reviews-block:before {
-  content: url(../images/pattern_2.svg);
+.order-section:before {
+  content: url(../images/berries_5.svg);
   position: absolute;
-  right: 0;
-  top: 50px;
+  bottom: 20%;
+  left: 10%;
 }
-.reviews-container .reviews-block .reviews-display {
-  height: 348px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  background-color: #F8FAF9;
+.order-section:after {
+  content: url(../images/big_leaf_form.svg);
+  position: absolute;
+  bottom: 25%;
+  right: 2%;
 }
-.reviews-container .reviews-block .reviews-display .reviews-display__avatar {
-  margin-right: 23px;
-  margin-left: 42px;
-  height: 264px;
-  width: 253px;
-}
-.reviews-container .reviews-block .reviews-display .reviews-display__review {
+.order-section .order-container {
   display: flex;
   flex-direction: column;
-}
-.reviews-container .reviews-block .reviews-display .reviews-display__review .review__title {
-  font-family: "Alegreya Sans";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 32px;
-  color: #292929;
-  margin-top: 15px;
-}
-.reviews-container .reviews-block .reviews-display .reviews-display__review .review__text {
-  font-family: "Alegreya Sans";
-  font-style: normal;
-  font-weight: normal;
-  font-size: .reviews-container .reviews-block .reviews-display .reviews-display__review .review__text 18px;
-  line-height: 22px;
-  color: #666666;
-  margin-top: 22px;
-}
-.reviews-container .reviews-block .reviews-display .reviews-display__review .review__name {
-  font-family: "Alegreya Sans";
-  font-style: normal;
-  font-weight: 500;
-  font-size: .reviews-container .reviews-block .reviews-display .reviews-display__review .review__name 18px;
-  line-height: 24px;
-  color: #292929;
-  margin-top: 25px;
-}
-.reviews-container .reviews-block .reviews-switcher {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding-left: 20px;
 }
-.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item {
-  margin-right: 6px;
-}
-.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item:last-child {
-  margin-right: 0;
-}
-.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image {
-  height: 70px;
-  width: 70px;
-  border-radius: 100px;
-}
-.reviews-container .reviews-block .reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image.active {
-  box-sizing: border-box;
-  border: 4px solid #365A49;
+.order-section .order-container .order-section-title {
+  color: inherit;
+  margin-bottom: 45px;
 }

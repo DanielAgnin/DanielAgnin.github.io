@@ -1,0 +1,42 @@
+.radio {
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  margin-left: 35px;
+}
+.radio:first-child {
+  margin-left: 0;
+}
+.radio .radio__element {
+  display: none;
+}
+.radio .radio__element:checked ~ .radio__visible::before {
+  display: block;
+}
+.radio .radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 100px;
+  background-color: white;
+}
+.radio .radio__visible:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #365a49;
+  border-radius: 100px;
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+.radio--checkbox .radio__visible:before {
+  background: url(../../../images/tick.svg) left 50% top 50% no-repeat;
+}

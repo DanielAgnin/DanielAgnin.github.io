@@ -1,0 +1,46 @@
+
+.fixed-menu {
+    position: fixed;
+    top: 38%;
+    right: 5%;
+    z-index: 1000;
+
+    .fixed-menu__list {
+        display: flex;
+        flex-direction: column;
+
+        .fixed-menu__item {
+            margin-bottom: 5px;
+
+            .fixed-menu__link {
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                display: block;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-color: white;
+                }
+            }
+        }
+
+        .fixed-menu__item--active {
+
+            .fixed-menu__link {
+                border-color: white;
+            }
+        }
+    }
+}

@@ -1,16 +1,17 @@
 
-@import url("../block_styles/reviews_display.scss");
-@import url("../block_styles/reviews_switcher.scss");
+@import url("../block_styles/reviews_display.css");
+@import url("../block_styles/reviews_switcher.css");
 
 
 .reviews {
     position: relative;
-    background: url(../images/berries_3.svg) top 22% right 22% no-repeat;
+    background: url(../../../images/berries_3.svg) top 22% right 22% no-repeat;
 
     &:before {
-        content: url(../images/berries_4.svg);
+        content: url(../../../images/berries_4.svg);
         position: absolute;
         bottom: -8%;
+        z-index: 100;
     }
 }
 
@@ -32,7 +33,7 @@
         position: relative;
 
         &:before {
-            content: url(../images/pattern_2.svg);
+            content: url(../../../images/pattern_2.svg);
             position: absolute;
             right: 0;
             top: 50px;

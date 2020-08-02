@@ -1,0 +1,25 @@
+
+.ordering-block {
+    display: flex;
+    flex-direction: column;
+    width: 371px;
+
+    .ordering-block__product-name {
+        color: white;
+        font-family: 'Alegreya Sans', sans-serif;
+        font-weight: 550;
+        font-size: 48px;
+        line-height: 58px;
+        width: 353px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ordering-block__product-description {
+        color: white;
+        font-family: 'Alegreya Sans', sans-serif;
+        margin-top: 5px;
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
