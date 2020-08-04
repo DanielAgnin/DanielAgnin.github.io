@@ -31,12 +31,12 @@
             }
         }
 
-        .benefits-list__item_picture-block {
+        .benefits-item__picture-block {
             margin-bottom: 30px;
             display: flex;
             justify-content: center;
 
-            .benefits-list__item_picture-block_backgound {
+            .benefits-item__picture-backgound {
                 height: 128px;
                 width: 128px;
                 border-radius: 100px;
@@ -48,11 +48,12 @@
             }
         }
 
-        .benefits-list__item_text-block {
+        .benefits-item__text-block {
             display: flex;
             flex-direction: column;
+            max-width: 279px;
 
-            .benefits-list__item_text-block_title {
+            .benefits-item__title {
                 font-family: 'Alegreya Sans', sans-serif;
                 font-style: normal;
                 font-weight: bold;

@@ -1,6 +1,6 @@
 
 
-        .reviews-display {
+        .reviews-block__reviews-display {
             height: 348px;
             display: flex;
             flex-direction: row;
@@ -37,6 +37,7 @@
                     line-height: 22px;
                     color: #666666;
                     margin-top: 22px;
+                    max-width: 463px;
                 }
     
                 .review__name {

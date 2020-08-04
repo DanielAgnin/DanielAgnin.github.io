@@ -1,4 +1,4 @@
-.reviews-display {
+.reviews-block__reviews-display {
   height: 348px;
   display: flex;
   flex-direction: row;
@@ -6,17 +6,17 @@
   align-content: center;
   background-color: #F8FAF9;
 }
-.reviews-display .reviews-display__avatar {
+.reviews-block__reviews-display .reviews-display__avatar {
   margin-right: 23px;
   margin-left: 42px;
   height: 264px;
   width: 253px;
 }
-.reviews-display .reviews-display__review {
+.reviews-block__reviews-display .reviews-display__review {
   display: flex;
   flex-direction: column;
 }
-.reviews-display .reviews-display__review .review__title {
+.reviews-block__reviews-display .reviews-display__review .review__title {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: bold;
@@ -25,7 +25,7 @@
   color: #292929;
   margin-top: 15px;
 }
-.reviews-display .reviews-display__review .review__text {
+.reviews-block__reviews-display .reviews-display__review .review__text {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: normal;
@@ -33,8 +33,9 @@
   line-height: 22px;
   color: #666666;
   margin-top: 22px;
+  max-width: 463px;
 }
-.reviews-display .reviews-display__review .review__name {
+.reviews-block__reviews-display .reviews-display__review .review__name {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: 500;

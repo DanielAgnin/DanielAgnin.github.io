@@ -6,39 +6,36 @@
     justify-content: space-between;
     
     .header-logo {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-content: center;
         width: 52.6px;
-
-        .cho {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .cco {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
+        color: white;
+        font-family: 'Alegreya Sans';
+        text-align: justify;
+        font-size: 28px;
+        line-height: 22px;
+        font-weight: 500;
     }
 
-    .header-list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
+    .header-navigation {
         min-width: 640px;
+        margin-top: 7px;
 
-        .header-list__item {
-            color: white;
-            font-family: 'Alegreya Sans', sans-serif;
-            font-size: 18px;
-            line-height: 30px;
+        .header-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+
+            .header-list__item {
+                text-decoration: none;
+
+                .header-list__link {
+                    color: white;
+                    font-family: 'Alegreya Sans';
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
         }
     }
 
@@ -47,11 +44,21 @@
         flex-wrap: wrap;
         align-content: center;
 
+        .header-phone__image {
+            height: 13.9px;
+            margin-top: 3px;
+        }
+
         .header-phone__number {
             color: white;
-            font-family: 'Alegreya Sans', sans-serif;
-            font-size: 22px;
+            font-family: 'Alegreya Sans';
+            font-size: 24px;
             line-height: 18px;
+            margin-left: 5px;
+
+            &:before {
+                content: url(../../../images/phone.svg);
+            }
         }
     }
 }

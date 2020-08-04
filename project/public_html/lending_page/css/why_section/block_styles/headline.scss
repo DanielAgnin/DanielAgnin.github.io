@@ -4,10 +4,14 @@
 .headline {
     margin-top: 100px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
 
     .headline__title {
         color: #292929;
-        font-family: 'Alegreya Sans', sans-serif;
+        font-family: 'Alegreya Sans';
         font-style: normal;
         font-weight: bold;
         font-size: 48px;
@@ -16,11 +20,12 @@
 
     .headline__subtitle {
         color: #666666;
-        font-family: 'Alegreya Sans', sans-serif;
+        font-family: 'Alegreya Sans';
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 22px;
         margin-top: 5px;
+        max-width: 436px;
     }
 }

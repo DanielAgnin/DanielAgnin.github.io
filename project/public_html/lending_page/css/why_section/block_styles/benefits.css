@@ -26,12 +26,12 @@
 .benefits-list .benefits-list__item:last-child:before {
   display: none;
 }
-.benefits-list .benefits-list__item .benefits-list__item_picture-block {
+.benefits-list .benefits-list__item .benefits-item__picture-block {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
 }
-.benefits-list .benefits-list__item .benefits-list__item_picture-block .benefits-list__item_picture-block_backgound {
+.benefits-list .benefits-list__item .benefits-item__picture-block .benefits-item__picture-backgound {
   height: 128px;
   width: 128px;
   border-radius: 100px;
@@ -41,11 +41,12 @@
   flex-wrap: wrap;
   align-content: center;
 }
-.benefits-list .benefits-list__item .benefits-list__item_text-block {
+.benefits-list .benefits-list__item .benefits-item__text-block {
   display: flex;
   flex-direction: column;
+  max-width: 279px;
 }
-.benefits-list .benefits-list__item .benefits-list__item_text-block .benefits-list__item_text-block_title {
+.benefits-list .benefits-list__item .benefits-item__text-block .benefits-item__title {
   font-family: "Alegreya Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -54,7 +55,7 @@
   color: #292929;
   margin-bottom: 18px;
 }
-.benefits-list .benefits-list__item .benefits-list__item_text-block:last-child {
+.benefits-list .benefits-list__item .benefits-item__text-block:last-child {
   font-family: "Alegreya Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
