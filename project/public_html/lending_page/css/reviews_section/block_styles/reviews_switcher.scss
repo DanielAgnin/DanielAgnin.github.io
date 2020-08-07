@@ -3,10 +3,10 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            padding-left: 20px;
+            padding-left: rem(20px);
     
             .rewiews-switcher__item {
-                margin-right: 6px;
+                margin-right: rem(6px);
     
                 &:last-child {
                     margin-right: 0;
@@ -15,13 +15,13 @@
                 .interactive-avatar__link {
 
                     .interactive-avatar__image {
-                        height: 70px;
-                        width: 70px;
+                        height: rem(70px);
+                        width: rem(70px);
                         border-radius: 100px;
                     
                         &.active {
                             box-sizing: border-box;
-                            border: 4px solid #365A49;
+                            border: rem(4px) solid #365A49;
                         }
                     }
                 }

@@ -1,23 +1,11 @@
 
 /*Подключение стилей блоков секции*/
 
-@import url("../block_styles/headline.css");
-@import url("../block_styles/benefits.css");
+@import "../block_styles/headline";
+@import "../block_styles/benefits";
 
 
 /*Стили для секции "Почему"*/
-
-.why {
-    position: relative;
-    background: url(../../../images/why_pattern.svg) left bottom 40% no-repeat;
-
-    &:before {
-        content: url(../../../images/raspberry.svg);
-        position: absolute;
-        bottom: -80px;
-        left: 0;
-    }
-}
 
 .why__container {
     display: flex;

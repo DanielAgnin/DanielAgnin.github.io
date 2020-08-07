@@ -17,19 +17,19 @@
   justify-content: center;
 }
 .reviews-container .reviews__title {
-  margin-bottom: 37px;
+  margin-bottom: rem(37px);
 }
 .reviews-container .reviews-block {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 940px;
-  height: 440px;
+  width: rem(940px);
+  height: rem(440px);
   position: relative;
 }
 .reviews-container .reviews-block:before {
   content: url(../../../images/pattern_2.svg);
   position: absolute;
   right: 0;
-  top: 50px;
+  top: rem(50px);
 }

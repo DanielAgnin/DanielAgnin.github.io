@@ -2,7 +2,7 @@
 /*Стили для блока "headline"*/
 
 .headline {
-    margin-top: 100px;
+    margin-top: rem(100px);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -14,8 +14,8 @@
         font-family: 'Alegreya Sans';
         font-style: normal;
         font-weight: bold;
-        font-size: 48px;
-        line-height: 58px;
+        font-size: rem(48px);
+        line-height: rem(58px);
     }
 
     .headline__subtitle {
@@ -23,9 +23,9 @@
         font-family: 'Alegreya Sans';
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
-        line-height: 22px;
-        margin-top: 5px;
-        max-width: 436px;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        margin-top: rem(5px);
+        max-width: rem(436px);
     }
 }

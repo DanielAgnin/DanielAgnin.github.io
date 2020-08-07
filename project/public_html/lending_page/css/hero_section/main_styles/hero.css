@@ -12,7 +12,7 @@
   background: url(../../../images/chocolate_bars.svg) left 78% center no-repeat, url(../../../images/big_leaf.svg) right 2% bottom 20% no-repeat, url(../../../images/berries_1.svg) right 17% bottom 10% no-repeat, url(../../../images/pattern.svg) right bottom no-repeat;
   background-color: #61C4D9;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   position: relative;
 }
 .hero:before {

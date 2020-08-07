@@ -18,18 +18,230 @@ $darkGreen: #0b4d3c;
 /*Базовый тёмно-зелёный цвет*/
 
 
-/*Подключение стилей секций*/
+/*Перевод px в rem*/
 
-@import url("../css/hero_section/main_styles/hero.css");
-@import url("../css/why_section/main_styles/why.css");
-@import url("../css/reviews_section/main_styles/reviews.css");
-@import url("../css/order_section/main_styles/form.css");
+@function rem($px) {
+    @return $px / $baseFontSize + 0rem;
+}
+
+/*Breakpoints*/
+
+$tablets: 768px;
+$phones: 480px;
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+
+/*Стили секций*/
+
+@import "../css/hero_section/block_styles/hamburger";
+
+.hero {
+    background: url("../images/chocolate_bars.svg") left 78% center no-repeat, 
+    url("../images/big_leaf.svg") right 2% bottom 20% no-repeat,
+    url("../images/berries_1.svg") right 17% bottom 10% no-repeat,
+    url("../images/pattern.svg") right bottom no-repeat;
+    
+    @include tablets {
+        background: none;
+    }
+
+    &:before {
+        position: absolute;
+        content: url("../images/berries_2.svg");
+        bottom: -5%;
+        right: 0;
+
+        @include tablets {
+            position: absolute;
+            content: url("../images/pattern.svg");
+            bottom: 25%;
+            right: 0;
+        }
+
+        @include phones {
+            position: absolute;
+            content: url("../images/pattern_phones.svg");
+            bottom: 40%;
+            right: 0;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        content: url("../images/smaller_leaf_2.svg");
+        left: 7%;
+        bottom: -4%;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    .hero__container {
+
+        &:before {
+            position: absolute;
+            content: url("../images/smaller_leaf_1.svg");
+            bottom: -3%;
+            left: 60%;
+
+            @include tablets {
+                display: none;
+            }
+        }
+    }
+}
+
+.header-phone__number {
+
+    &:before {
+        content: url("../images/phone.svg");
+    }
+}
+
+.ordering-block {
+    @include tablets {
+
+        &:before {
+            content: url("../images/chocolates_tablets.svg");
+            height: 22rem;
+            padding-bottom: 0.8rem;
+        }
+    }
+
+    @include phones {
+
+        &:before {
+            content: "";
+            background: url("../images/chocolates_tablets.svg") center center no-repeat;
+            background-size: contain;
+            width: rem(316px);
+            height: rem(330px);
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+@import "../css/hero_section/main_styles/hero";
+
+.why {
+    position: relative;
+    background: url("../images/why_pattern.svg") left bottom 40% no-repeat;
+    
+    @include tablets {
+        background: url("../images/why_pattern.svg") left bottom 80% no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url("../images/raspberry.svg");
+        position: absolute;
+        bottom: rem(-80px);
+        left: 0;
+
+        @include phones {
+            content: none;
+        }
+    }
+}
+
+@import "../css/why_section/main_styles/why";
+
+.reviews {
+    position: relative;
+    background: url("../images/berries_3.svg") top 22% right 22% no-repeat;
+
+    @include tablets {
+        background: url("../images/berries_3.svg") top 22% right 4% no-repeat;
+    }
+
+    @include phones {
+        background: url("../images/berries_3.svg") top 22% right 0 no-repeat;
+    }
+
+    &:before {
+        content: url("../images/berries_4.svg");
+        position: absolute;
+        bottom: -8%;
+        z-index: 100;
+    }
+}
+
+.reviews-block {
+
+    &:before {
+        content: url("../images/pattern_2.svg");
+        position: absolute;
+        right: 0;
+        top: rem(50px);
+        z-index: 30;
+    } 
+}
+
+@import "../css/reviews_section/main_styles/reviews";
+
+.radio--checkbox {
+
+    .radio__visible {
+        border-radius: 0;
+    
+        &:before {
+            content: "";
+            background: url("../images/tick.svg") left 50% top 50% no-repeat;
+        }
+    }
+}
+
+@import "../css/order_section/main_styles/form";
+
+.footer {
+    background: url("../images/map.svg");
+    background-size: cover;
+}
+
+.footer__phone-number {
+
+    &:before {
+        content: "";
+        background: url("../images/phone_green.svg");
+    }
+}
+
+@import "../css/footer_section/main_styles/footer";
 
 
 /*Подключение стилей для фиксированного меню*/
-@import url("fixed_menu.css");
+
+@import "fixed_menu";
+
 
 /*Базовые стили для всей страницы*/
+
+html {
+    font-size: $baseFontSize;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+}
 
 html,
 body {
@@ -39,15 +251,15 @@ body {
 }
 
 .wrapper {
-    overflow: hidden;
-    min-width: 940px;
+    width: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .container {
-    width: 940px;
+    width: 95%;
+    max-width: 940px;
     min-height: 100%;
     margin: 0 auto;
     position: relative;
@@ -90,7 +302,7 @@ p {
 
 .section {
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
 }
 
 .section--font-color--green {
@@ -103,17 +315,17 @@ p {
     font-family: 'Alegreya Sans';
     font-style: normal;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: rem(48px);
+    line-height: rem(58px);
     text-align: center;
 }
 
 .order-button {
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: bold;
-    max-width: 85px;
-    margin-top: 32px;
-    padding: 18px 35px;
+    max-width: rem(85px);
+    margin-top: rem(32px);
+    padding: rem(18px) rem(35px);
     text-transform: uppercase;
     border-radius: 100px;
     line-height: 1;
@@ -138,9 +350,9 @@ p {
         background-color: $darkGreen;
         color: white;
         padding: 0;
-        max-width: 156px;
-        width: 156px;
-        height: 60px;
+        max-width: rem(156px);
+        width: rem(156px);
+        height: rem(60px);
 
         &:hover {
             background-color: white;
@@ -154,9 +366,9 @@ p {
         color: black;
         text-transform: none;
         padding: 0;
-        max-width: 156px;
-        width: 156px;
-        height: 60px;
+        max-width: rem(156px);
+        width: rem(156px);
+        height: rem(60px);
         padding: 0;
 
         &:hover {
@@ -168,22 +380,38 @@ p {
 }
 
 .order-section {
-    background-image: url(../images/pattern_3.png);
+    background-image: url("../images/pattern_3.png");
     background-size: cover;
     position: relative;
 
     &:before {
-        content: url(../images/berries_5.svg);
+        content: url("../images/berries_5.svg");
         position: absolute;
-        bottom: 20%;
+        bottom: 15%;
         left: 10%;
+        
+        @include tablets {
+            display: none;
+        }
+
+        @include phones {
+            display: none;
+        }
     }
 
     &:after {
-        content: url(../images/big_leaf_form.svg);
+        content: url("../images/big_leaf_form.svg");
         position: absolute;
-        bottom: 25%;
+        bottom: 10%;
         right: 2%;
+
+        @include tablets {
+            display: none;
+        }
+
+        @include phones {
+            display: none;
+        }
     }
 
     .order-container {
@@ -193,7 +421,7 @@ p {
 
         .order-section-title {
             color: inherit;
-            margin-bottom: 45px;
+            margin-bottom: rem(45px);
         }
     }
 }

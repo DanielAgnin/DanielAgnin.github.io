@@ -2,21 +2,38 @@
 /*Стили для блока "benefits"*/
 
 .benefits-list {
-    margin-top: 53px;
+    margin-top: rem(53px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
+    @include phones {
+        flex-direction: column;
+    }
+
     .benefits-list__item {
+        display: flex;
         text-align: center;
         position: relative;
+        flex-direction: column;
+
+        @include phones {
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+            margin-bottom: rem(50px);
+        }
 
         &:before {
-            content: url(../../../images/why_dots.svg);
+            content: url("../../../images/why_dots.svg");
             position: absolute;
-            top: 50px;
+            top: rem(50px);
             right: 0;
             transform: translateX(110%);
+
+            @include phones {
+                display: none;
+            }
         }
 
         &:first-child {
@@ -32,13 +49,19 @@
         }
 
         .benefits-item__picture-block {
-            margin-bottom: 30px;
+            margin-bottom: rem(30px);
             display: flex;
             justify-content: center;
+            
+            @include phones {
+                max-width: rem(128px);
+                margin-bottom: 0;
+                margin-right: rem(20px);
+            }
 
             .benefits-item__picture-backgound {
-                height: 128px;
-                width: 128px;
+                height: rem(128px);
+                width: rem(128px);
                 border-radius: 100px;
                 background-color: #F2F5F4;
                 display: flex;
@@ -51,24 +74,24 @@
         .benefits-item__text-block {
             display: flex;
             flex-direction: column;
-            max-width: 279px;
+            max-width: rem(279px);
 
             .benefits-item__title {
                 font-family: 'Alegreya Sans', sans-serif;
                 font-style: normal;
                 font-weight: bold;
-                font-size: 27px;
-                line-height: 32px;
+                font-size: rem(27px);
+                line-height: rem(32px);
                 color: #292929;
-                margin-bottom: 18px;
+                margin-bottom: rem(18px);
             }
 
             &:last-child {
                 font-family: 'Alegreya Sans', sans-serif;
                 font-style: normal;
                 font-weight: 300;
-                font-size: 18px;
-                line-height: 22px;
+                font-size: rem(18px);
+                line-height: rem(22px);
                 color: #666666;
             }
         }

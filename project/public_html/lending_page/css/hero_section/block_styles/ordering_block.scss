@@ -2,24 +2,47 @@
 .ordering-block {
     display: flex;
     flex-direction: column;
-    width: 371px;
+    width: rem(371px);
+
+    @include tablets {
+        height: 100%;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
 
     .ordering-block__product-name {
         color: white;
         font-family: 'Alegreya Sans', sans-serif;
         font-weight: 550;
-        font-size: 48px;
-        line-height: 58px;
-        width: 353px;
+        font-size: rem(48px);
+        line-height: rem(58px);
+        width: rem(353px);
         margin: 0;
         padding: 0;
+
+        @include tablets {
+            width: 100%;
+        }
     }
 
     .ordering-block__product-description {
         color: white;
         font-family: 'Alegreya Sans', sans-serif;
-        margin-top: 5px;
-        font-size: 21px;
-        line-height: 25px;
+        margin-top: rem(5px);
+        font-size: rem(21px);
+        line-height: rem(25px);
+
+        @include tablets {
+            padding-left: 23%;
+            padding-right: 23%;
+            margin-top: 0.5rem;
+        }
+
+        @include phones {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
     }
 }

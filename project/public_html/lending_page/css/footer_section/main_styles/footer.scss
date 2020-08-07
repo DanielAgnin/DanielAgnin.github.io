@@ -1,0 +1,12 @@
+
+@import "../block_styles/footer_menu";
+
+.footer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footer-container {
+    height: 100%;
+}
