@@ -44,6 +44,10 @@
                     border: none;
                     padding: rem(18px) rem(10px);
                     border: solid rem(3px) transparent;
+
+                    @include phones {
+                        padding: rem(5px) rem(3px);
+                    }
     
                     &:focus {
                         border-color: #dee2bd;
@@ -54,6 +58,11 @@
                 .form__input--textarea {
                     height: rem(145px);
                     resize: none;
+
+                    @include phones {
+                        height: rem(60px);
+                        max-width: 95%;
+                    }
                 }
             }
         }
@@ -84,6 +93,10 @@
 
         .form__buttons {
             text-align: center;
+
+            @include phones {
+                margin-top: rem(-15px);
+            }
         }
     }
 }

@@ -430,6 +430,10 @@ p {
         .order-section-title {
             color: inherit;
             margin-bottom: rem(45px);
+
+            @include phones {
+                margin: 0;
+            }
         }
     }
 }
