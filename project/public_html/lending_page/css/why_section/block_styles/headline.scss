@@ -6,8 +6,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
 
     .headline__title {
         color: #292929;
@@ -27,5 +26,9 @@
         line-height: rem(22px);
         margin-top: rem(5px);
         max-width: rem(436px);
+
+        @include phones {
+            max-width: 90%;
+        }
     }
 }

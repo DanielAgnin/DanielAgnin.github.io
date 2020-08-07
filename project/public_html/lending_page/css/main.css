@@ -285,7 +285,7 @@
 }
 @media screen and (max-width: 480px) {
   .why:before {
-    content: none;
+    content: "";
   }
 }
 
@@ -296,8 +296,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
+  align-items: center;
 }
 .headline .headline__title {
   color: #292929;
@@ -316,6 +315,11 @@
   line-height: 1.2222222222rem;
   margin-top: 0.2777777778rem;
   max-width: 24.2222222222rem;
+}
+@media screen and (max-width: 480px) {
+  .headline .headline__subtitle {
+    max-width: 90%;
+  }
 }
 
 /*Стили для блока "benefits"*/
@@ -429,7 +433,7 @@
 }
 @media screen and (max-width: 480px) {
   .reviews {
-    background: url("../images/berries_3.svg") top 22% right 0 no-repeat;
+    background: none;
   }
 }
 .reviews:before {
@@ -437,6 +441,11 @@
   position: absolute;
   bottom: -8%;
   z-index: 100;
+}
+@media screen and (max-width: 480px) {
+  .reviews:before {
+    content: none;
+  }
 }
 
 .reviews-block:before {
@@ -446,7 +455,6 @@
   top: 2.7777777778rem;
   z-index: 30;
 }
-
 .reviews-block__reviews-display {
   display: flex;
   flex-direction: row;
@@ -794,7 +802,7 @@ html {
 }
 @media screen and (max-width: 480px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

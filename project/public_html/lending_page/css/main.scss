@@ -154,7 +154,7 @@ $phones: 480px;
         left: 0;
 
         @include phones {
-            content: none;
+            content: "";
         }
     }
 }
@@ -170,7 +170,7 @@ $phones: 480px;
     }
 
     @include phones {
-        background: url("../images/berries_3.svg") top 22% right 0 no-repeat;
+        background: none;
     }
 
     &:before {
@@ -178,6 +178,10 @@ $phones: 480px;
         position: absolute;
         bottom: -8%;
         z-index: 100;
+
+        @include phones {
+            content: none;
+        }
     }
 }
 
@@ -189,6 +193,10 @@ $phones: 480px;
         right: 0;
         top: rem(50px);
         z-index: 30;
+
+        @include phones {
+            
+        }
     } 
 }
 
@@ -239,7 +247,7 @@ html {
     }
 
     @include phones {
-        font-size: $baseFontSize - 2px;
+        font-size: $baseFontSize - 4px;
     }
 }
 
