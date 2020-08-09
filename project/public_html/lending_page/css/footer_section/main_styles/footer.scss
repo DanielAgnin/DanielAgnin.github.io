@@ -27,6 +27,10 @@
 .footer__social-sites {
     display: flex;
     flex-direction: row;
+    padding: 0;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .social-sites__item {
@@ -36,6 +40,7 @@
 .social-sites__image {
     fill: #B3B3B3;
     width: rem(20px);
+    height: rem(18px);
 
     &:hover {
         fill: black;

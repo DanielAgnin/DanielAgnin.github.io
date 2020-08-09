@@ -848,6 +848,10 @@
 .footer__social-sites {
   display: flex;
   flex-direction: row;
+  padding: 0;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .social-sites__item {
@@ -857,6 +861,7 @@
 .social-sites__image {
   fill: #B3B3B3;
   width: 1.1111111111rem;
+  height: 1rem;
 }
 .social-sites__image:hover {
   fill: black;
