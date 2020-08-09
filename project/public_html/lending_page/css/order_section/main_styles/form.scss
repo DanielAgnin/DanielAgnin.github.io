@@ -1,6 +1,56 @@
 
 @import "../block_styles/radio";
 
+.order-section {
+    background-image: url("../images/pattern_3.png");
+    background-size: cover;
+    position: relative;
+
+    &:before {
+        content: url("../images/berries_5.svg");
+        position: absolute;
+        bottom: 15%;
+        left: 10%;
+        
+        @include tablets {
+            display: none;
+        }
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: url("../images/big_leaf_form.svg");
+        position: absolute;
+        bottom: 10%;
+        right: 2%;
+
+        @include tablets {
+            display: none;
+        }
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    .order-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .order-section-title {
+            color: inherit;
+            margin-bottom: rem(45px);
+
+            @include phones {
+                margin: 0;
+            }
+        }
+    }
+}
 
 .form {
     display: flex;
@@ -97,6 +147,18 @@
             @include phones {
                 margin-top: rem(-15px);
             }
+        }
+    }
+}
+
+.radio--checkbox {
+
+    .radio__visible {
+        border-radius: 0;
+    
+        &:before {
+            content: "";
+            background: url("../images/tick.svg") left 50% top 50% no-repeat;
         }
     }
 }

@@ -26,3 +26,20 @@
         }
     }
 }
+
+.product-advantages__item-image {
+    overflow: visible;
+    fill: #C6F7FF;
+}
+
+.product-advantages__item-image.leaf {
+    width: rem(43px);
+}
+
+.product-advantages__item-image.truck {
+    width: rem(50px);
+}
+
+.product-advantages__item-image.ruler {
+    width: rem(40px);
+}

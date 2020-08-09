@@ -3,10 +3,42 @@
 
 .footer {
     height: 100vh;
+    min-height: rem(650px);
     display: flex;
     flex-direction: column-reverse;
 }
 
 .footer-container {
     height: 100%;
+}
+
+.footer {
+    background: url("../images/map.svg");
+    background-size: cover;
+}
+
+.footer__phone-number {
+
+    &:before {
+        content: url("../images/phone_green.svg");
+    }
+}
+
+.footer__social-sites {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-sites__item {
+    margin-right: rem(14px);
+}
+
+.social-sites__image {
+    fill: #B3B3B3;
+    width: rem(20px);
+
+    &:hover {
+        fill: black;
+        transition: 0.2s;
+    }
 }

@@ -25,11 +25,14 @@
         }
 
         &:before {
-            content: url("../../../images/why_dots.svg");
+            content: url("../images/why_dots.svg");
             position: absolute;
-            top: rem(50px);
-            right: 0;
-            transform: translateX(110%);
+            top: 20%;
+            left: 100%;
+
+            @include tablets {
+                display: none;
+            }
 
             @include phones {
                 display: none;
@@ -68,6 +71,12 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 align-content: center;
+                
+                .benefits-item__image {
+                    height: rem(64px);
+                    width: rem(64px);
+                    fill: #292929;
+                }
             }
         }
 

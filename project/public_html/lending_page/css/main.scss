@@ -46,188 +46,18 @@ $phones: 480px;
 
 @import "../css/hero_section/block_styles/hamburger";
 
-.hero {
-    background: url("../images/chocolate_bars.svg") left 78% center no-repeat, 
-    url("../images/big_leaf.svg") right 2% bottom 20% no-repeat,
-    url("../images/berries_1.svg") right 17% bottom 10% no-repeat,
-    url("../images/pattern.svg") right bottom no-repeat;
-    
-    @include tablets {
-        background: none;
-    }
-
-    &:before {
-        position: absolute;
-        content: url("../images/berries_2.svg");
-        bottom: -5%;
-        right: 0;
-
-        @include tablets {
-            position: absolute;
-            content: url("../images/pattern.svg");
-            bottom: 25%;
-            right: 0;
-        }
-
-        @include phones {
-            position: absolute;
-            content: url("../images/pattern_phones.svg");
-            bottom: 40%;
-            right: 0;
-        }
-    }
-
-    &:after {
-        position: absolute;
-        content: url("../images/smaller_leaf_2.svg");
-        left: 7%;
-        bottom: -4%;
-
-        @include tablets {
-            display: none;
-        }
-    }
-
-    .hero__container {
-
-        &:before {
-            position: absolute;
-            content: url("../images/smaller_leaf_1.svg");
-            bottom: -3%;
-            left: 60%;
-
-            @include tablets {
-                display: none;
-            }
-        }
-    }
-}
-
-.header-phone__number {
-
-    &:before {
-        content: url("../images/phone.svg");
-    }
-}
-
-.ordering-block {
-    @include tablets {
-
-        &:before {
-            content: url("../images/chocolates_tablets.svg");
-            height: 22rem;
-            padding-bottom: 0.8rem;
-        }
-    }
-
-    @include phones {
-
-        &:before {
-            content: "";
-            background: url("../images/chocolates_tablets.svg") center center no-repeat;
-            background-size: contain;
-            width: rem(316px);
-            height: rem(330px);
-            padding-bottom: 2rem;
-        }
-    }
-}
 
 @import "../css/hero_section/main_styles/hero";
 
-.why {
-    position: relative;
-    background: url("../images/why_pattern.svg") left bottom 40% no-repeat;
-    
-    @include tablets {
-        background: url("../images/why_pattern.svg") left bottom 80% no-repeat;
-    }
-
-    @include phones {
-        background: none;
-    }
-
-    &:before {
-        content: url("../images/raspberry.svg");
-        position: absolute;
-        bottom: rem(-80px);
-        left: 0;
-
-        @include phones {
-            content: "";
-        }
-    }
-}
 
 @import "../css/why_section/main_styles/why";
 
-.reviews {
-    position: relative;
-    background: url("../images/berries_3.svg") top 22% right 22% no-repeat;
-
-    @include tablets {
-        background: url("../images/berries_3.svg") top 22% right 4% no-repeat;
-    }
-
-    @include phones {
-        background: none;
-    }
-
-    &:before {
-        content: url("../images/berries_4.svg");
-        position: absolute;
-        bottom: -8%;
-        z-index: 100;
-
-        @include phones {
-            content: none;
-        }
-    }
-}
-
-.reviews-block {
-
-    &:before {
-        content: url("../images/pattern_2.svg");
-        position: absolute;
-        right: 0;
-        top: rem(50px);
-        z-index: 30;
-
-        @include phones {
-            
-        }
-    } 
-}
 
 @import "../css/reviews_section/main_styles/reviews";
 
-.radio--checkbox {
-
-    .radio__visible {
-        border-radius: 0;
-    
-        &:before {
-            content: "";
-            background: url("../images/tick.svg") left 50% top 50% no-repeat;
-        }
-    }
-}
 
 @import "../css/order_section/main_styles/form";
 
-.footer {
-    background: url("../images/map.svg");
-    background-size: cover;
-}
-
-.footer__phone-number {
-
-    &:before {
-        content: "";
-        background: url("../images/phone_green.svg");
-    }
-}
 
 @import "../css/footer_section/main_styles/footer";
 
@@ -384,56 +214,5 @@ p {
             transition: 0.2s;
         }
 
-    }
-}
-
-.order-section {
-    background-image: url("../images/pattern_3.png");
-    background-size: cover;
-    position: relative;
-
-    &:before {
-        content: url("../images/berries_5.svg");
-        position: absolute;
-        bottom: 15%;
-        left: 10%;
-        
-        @include tablets {
-            display: none;
-        }
-
-        @include phones {
-            display: none;
-        }
-    }
-
-    &:after {
-        content: url("../images/big_leaf_form.svg");
-        position: absolute;
-        bottom: 10%;
-        right: 2%;
-
-        @include tablets {
-            display: none;
-        }
-
-        @include phones {
-            display: none;
-        }
-    }
-
-    .order-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .order-section-title {
-            color: inherit;
-            margin-bottom: rem(45px);
-
-            @include phones {
-                margin: 0;
-            }
-        }
     }
 }

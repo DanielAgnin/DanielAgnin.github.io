@@ -9,8 +9,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: center;
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .footer__adress {
         font-family: "Alegreya Sans";
@@ -20,6 +24,11 @@
         display: flex;
         flex-direction: column;
 
+        @include phones {
+            align-items: center;
+            justify-content: space-between;
+        }
+
         .adress-text {
             line-height: rem(24px);
             color: #292929;
@@ -28,28 +37,6 @@
         .phone-number {
             line-height: rem(21px);
             color: #497870;
-        }
-    }
-
-    .footer__social-sites {
-
-        .social-sites__item {
-
-            .vk {
-                background: url("../../../images/vk.svg") no-repeat;
-            }
-
-            .facebook {
-                background: url("../../../images/facebook.svg") no-repeat;
-            }
-
-            .instagram {
-                background: url("../../../images/instagram.svg") no-repeat;
-            }
-
-            .twitter {
-                background: url("../../../images/twitter.svg") no-repeat;
-            }
         }
     }
 }

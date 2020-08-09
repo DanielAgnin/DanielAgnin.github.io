@@ -15,7 +15,6 @@ $darkGreen: #0b4d3c;  /*Базовый тёмно-зелёный цвет*/
 /*Стили для секции "hero"*/
 
 .hero {
-    background-color: $blue;
     height: 100vh;
     min-height: rem(650px);
     position: relative;
@@ -26,5 +25,93 @@ $darkGreen: #0b4d3c;  /*Базовый тёмно-зелёный цвет*/
         justify-content: space-between;
         height: 100%;
         position: relative;
+    }
+}
+
+.hero {
+    background: url("../images/chocolate_bars.svg") left 78% center no-repeat, 
+    url("../images/big_leaf.svg") right 2% bottom 20% no-repeat,
+    url("../images/berries_1.svg") right 17% bottom 10% no-repeat,
+    url("../images/pattern.svg") right bottom no-repeat;
+    background-color: $blue;
+    
+    @include tablets {
+        background-image: none;
+    }
+
+    &:before {
+        position: absolute;
+        content: url("../images/berries_2.svg");
+        bottom: -5%;
+        right: 0;
+
+        @include tablets {
+            position: absolute;
+            content: url("../images/pattern.svg");
+            bottom: 25%;
+            right: 0;
+        }
+
+        @include phones {
+            position: absolute;
+            content: url("../images/pattern_phones.svg");
+            bottom: 40%;
+            right: 0;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        content: url("../images/smaller_leaf_2.svg");
+        left: 7%;
+        bottom: -4%;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    .hero__container {
+
+        &:before {
+            position: absolute;
+            content: url("../images/smaller_leaf_1.svg");
+            bottom: -3%;
+            left: 60%;
+
+            @include tablets {
+                display: none;
+            }
+        }
+    }
+}
+
+.header-phone__number {
+
+    &:before {
+        content: url("../images/phone.svg");
+    }
+}
+
+.ordering-block {
+    @include tablets {
+
+        &:before {
+            content: url("../images/chocolates_tablets.svg");
+            height: 22rem;
+            padding-bottom: 0.8rem;
+        }
+    }
+
+    @include phones {
+
+        &:before {
+            content: "";
+            background: url("../images/chocolates_tablets.svg") center center no-repeat;
+            background-size: contain;
+            width: rem(316px);
+            height: rem(330px);
+            padding-bottom: 2rem;
+        }
     }
 }
