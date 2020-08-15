@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/main.css">
+    <script src="../script/navigation_menu.js"></script>
     <title>
         Chocco
     </title>
@@ -18,6 +19,55 @@
         <!--Приветственная секция-->
         <section class="hero">
             <div class="container hero__container">
+
+                <!--Верхний слой навигационного меню-->
+                <div id="navMenu" class="hero__navigation-menu">
+
+                    <!--Кнопка для закрытия-->
+                    <svg class="navigation-menu__closing-button" id="navClose" onclick="navClose()">
+                        <use xlink:href="../images/sprite.svg#close"></use>
+                    </svg>
+
+                    <!--Верхний слой содержимого навигационного меню-->
+                    <ul id="navMenu__content" class="navigation-menu__content">
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Батончики
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Команда
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Меню
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Как мы работаем
+                            </a>
+                        </li>
+                        <li class="navigation-menu__item">
+                            <a href="#" class="navigation-menu__link">
+                                Контакты
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
 
                 <!--Верхнее меню-->
                 <header class="menu">
@@ -64,15 +114,17 @@
                         </ul>
                     </nav>
                     <div class="header-phone">
-                        <a href="#" class="header-phone__number phone-number">
+                        <a href="tel:+78009039090" class="header-phone__number phone-number">
                             8 800 903 90 90
                         </a>
                     </div>
-                    <a href="#" class="hamburger">
+
+                    <!--Иконка для открытия полноэкранного навигационного меню-->
+                    <div class="hamburger" id="navOpen" onclick="navOpen()">
                         <span class="hamburger__plank"></span>
                         <span class="hamburger__plank"></span>
                         <span class="hamburger__plank"></span>
-                    </a>
+                    </div>
                 </header>
 
                 <!--Блок для заказа-->
@@ -202,6 +254,147 @@
                         </article>
                     </li>
                 </ul>
+
+            </div>
+        </section>
+
+        <!--Секция "Товары"-->
+        <section class="section products">
+            <div class="container products-container">
+
+                <div class="slide">
+                    <aside class="swift swift-left">
+                        <svg class="swift-left__arrow">
+                            <use xlink:href="../images/sprite.svg#arrow"></use>
+                        </svg>
+                    </aside>
+    
+                    <div class="products__maincontent">
+    
+                        <div class="products__image-block">
+                            <img src="../images/first_product.svg" alt="granola vinegar" class="image-block__image">
+                        </div>
+    
+                        <div class="products__text-block">
+                            <div class="products__drop-down-menu">
+                                <div class="drop-down-menu__block">
+                                    <img src="../images/what_is_in.svg" alt="what is in" class="drop-down-menu__image">
+                                    <ul class="drop-down-menu__list">
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#grape"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Виноград
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    25 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#nut"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Грецкий орех
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    32 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#almond"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Кунжутное семя
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    20 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#powder"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Сухое молоко
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    10 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#apitherapy"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Зам. сахара
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    4 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="drop-down-menu__item">
+                                            <div href="#" class="drop-down-menu__link">
+                                                <svg class="drop-down-menu__icon">
+                                                    <use xlink:href="../images/sprite.svg#beans"></use>
+                                                </svg>
+                                                <span class="drop-down-menu__ingredient">
+                                                    Какао бобы
+                                                </span>
+                                                <span class="drop-down-menu__ingredient-quantity">
+                                                    4 г
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h2 class="products__product-name">
+                                БАТОНЧИК "ГРАНОЛА ВИНОГРАД"
+                            </h2>
+                            <div class="products__product-desc">
+                                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                            </div>
+                            <div class="products__health-stat">
+                                <p class="health-stat__kkal">
+                                    Калорийность <span class="kkal">110 ккал</span>
+                                </p>
+                                <p class="health-stat__weight">
+                                    Вес <span class="weight">95 грамм</span>
+                                </p>
+                            </div>
+                            <div class="products__order-block">
+                                <span class="order-block__price">
+                                    140 ₽
+                                </span>
+                                <a href="#" class="order-button  order-button--theme--green products__order-button">
+                                    <span class="order-button__text">
+                                        ЗАКАЗАТЬ
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <aside class="swift swift-right">
+                        <svg class="swift-right__arrow">
+                            <use xlink:href="../images/sprite.svg#arrow"></use>
+                        </svg>
+                    </aside>
+                </div>
 
             </div>
         </section>
@@ -375,7 +568,7 @@
                         <span class="adress-text">
                             Москва, ул.Новый Арбат, д.31/12
                         </span>
-                        <a href="#" class="footer__phone-number phone-number">
+                        <a href="tel:+78009039090" class="footer__phone-number phone-number">
                             8 800 903 90 90
                         </a>
                     </div>
