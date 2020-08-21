@@ -56,6 +56,9 @@ $phones: 480px;
 @import "../css/products_section/main_styles/products";
 
 
+@import "../css/team_section/main_styles/team.scss";
+
+
 @import "../css/reviews_section/main_styles/reviews";
 
 
@@ -110,6 +113,12 @@ body {
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
 }
 
 li {
@@ -130,7 +139,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-weight: normal;
 }
 
 a {

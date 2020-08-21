@@ -1,8 +1,17 @@
 
-        .reviews-block__reviews-display {
+    .reviews-display__list {
+        position: relative;
+        min-height: 264px;
+    }
+
+        .reviews-display__item {
             display: flex;
             flex-direction: row;
             background-color: #F8FAF9;
+            position: absolute;
+            opacity: 0;
+            transition: 0.3s;
+            pointer-events: none;
 
             @include tablets {
                 flex-direction: column;
@@ -11,6 +20,12 @@
                 padding-bottom: rem(30px);
                 padding-top: rem(30px);
                 margin-bottom: rem(40px);
+            }
+
+            &.active {
+                opacity: 1;
+                position: static;
+                pointer-events: unset;
             }
     
             .reviews-display__avatar {

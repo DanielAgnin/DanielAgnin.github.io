@@ -752,13 +752,99 @@
   justify-content: center;
 }
 
-.reviews-block__reviews-display {
+.team__desc {
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+  position: absolute;
+  max-width: 220px;
+}
+
+.team__desc-block {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+.team__desc-block .team__post {
+  font-family: Alegreya Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 5px;
+}
+.team__desc-block .team__duties {
+  color: #666666;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  height: 100vh;
+}
+
+.team__title {
+  margin-bottom: 2.7777777778rem;
+}
+
+.team__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.team__list .team__item {
+  margin: 0;
+  padding: 0;
+  max-width: 220px;
+}
+.team__list .team__item .team__image {
+  margin-bottom: 1.1111111111rem;
+}
+.team__list .team__item .team__member {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1666666667rem;
+  line-height: 1.3888888889rem;
+  color: #292929;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.team__list .team__item .team__member .team__link {
+  fill: #365A49;
+  transform: rotate(90deg);
+  height: 9px;
+  width: 9px;
+  margin-left: 5px;
+}
+
+.reviews-display__list {
+  position: relative;
+  min-height: 264px;
+}
+
+.reviews-display__item {
   display: flex;
   flex-direction: row;
   background-color: #F8FAF9;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
 }
 @media screen and (max-width: 768px) {
-  .reviews-block__reviews-display {
+  .reviews-display__item {
     flex-direction: column;
     text-align: center;
     align-items: center;
@@ -767,7 +853,12 @@
     margin-bottom: 2.2222222222rem;
   }
 }
-.reviews-block__reviews-display .reviews-display__avatar {
+.reviews-display__item.active {
+  opacity: 1;
+  position: static;
+  pointer-events: unset;
+}
+.reviews-display__item .reviews-display__avatar {
   margin-right: 1.2777777778rem;
   margin-left: 2.3333333333rem;
   height: 14.6666666667rem;
@@ -775,16 +866,16 @@
   z-index: 60;
 }
 @media screen and (max-width: 768px) {
-  .reviews-block__reviews-display .reviews-display__avatar {
+  .reviews-display__item .reviews-display__avatar {
     height: 7.2222222222rem;
     width: 7.2222222222rem;
   }
 }
-.reviews-block__reviews-display .reviews-display__review {
+.reviews-display__item .reviews-display__review {
   display: flex;
   flex-direction: column;
 }
-.reviews-block__reviews-display .reviews-display__review .review__title {
+.reviews-display__item .reviews-display__review .review__title {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: bold;
@@ -794,7 +885,7 @@
   margin-top: 0.8333333333rem;
   z-index: 50;
 }
-.reviews-block__reviews-display .reviews-display__review .review__text {
+.reviews-display__item .reviews-display__review .review__text {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: normal;
@@ -806,11 +897,11 @@
   z-index: 40;
 }
 @media screen and (max-width: 768px) {
-  .reviews-block__reviews-display .reviews-display__review .review__text {
+  .reviews-display__item .reviews-display__review .review__text {
     max-width: 90%;
   }
 }
-.reviews-block__reviews-display .reviews-display__review .review__name {
+.reviews-display__item .reviews-display__review .review__name {
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: 500;
@@ -827,19 +918,16 @@
   padding-left: 1.1111111111rem;
 }
 .reviews-block__reviews-switcher .rewiews-switcher__item {
-  margin-right: 0.3333333333rem;
+  margin-right: 10px;
+  height: 82px;
+  width: 82px;
 }
-.reviews-block__reviews-switcher .rewiews-switcher__item:last-child {
-  margin-right: 0;
-}
-.reviews-block__reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image {
-  height: 3.8888888889rem;
-  width: 3.8888888889rem;
-  border-radius: 100px;
-}
-.reviews-block__reviews-switcher .rewiews-switcher__item .interactive-avatar__link .interactive-avatar__image.active {
+.reviews-block__reviews-switcher .rewiews-switcher__item.active {
   box-sizing: border-box;
-  border: 0.2222222222rem solid #365A49;
+  border-radius: 100px;
+  border: 4px solid #365A49;
+  outline-offset: -4px;
+  transform: translate(-4px, -4px);
 }
 
 .reviews-container {
@@ -932,7 +1020,7 @@
 
 @media screen and (max-width: 480px) {
   .radio--checkbox {
-    padding-left: 20%;
+    align-items: center;
   }
 }
 .radio--checkbox .radio__visible:before {
@@ -1062,6 +1150,7 @@
   margin-bottom: 0.2777777778rem;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 480px) {
   .form .form__column .form__controls {
@@ -1083,6 +1172,12 @@
     margin-top: -0.8333333333rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .form .form__radio {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 .radio--checkbox .radio__visible {
   border-radius: 0;
@@ -1094,8 +1189,13 @@
 
 .footer__menu {
   background-color: white;
-  height: 5rem;
+  height: 93px;
   width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .footer__menu {
+    height: 151px;
+  }
 }
 
 .footer-container {
@@ -1122,15 +1222,24 @@
   .footer-container .footer__adress {
     align-items: center;
     justify-content: space-between;
+    font-size: 21px;
+    margin-bottom: 12px;
   }
 }
 .footer-container .footer__adress .adress-text {
   line-height: 1.3333333333rem;
   color: #292929;
+  font-size: 21px;
+}
+@media screen and (max-width: 480px) {
+  .footer-container .footer__adress .adress-text {
+    margin-bottom: 12px;
+  }
 }
 .footer-container .footer__adress .phone-number {
   line-height: 1.1666666667rem;
   color: #497870;
+  font-size: 21px;
 }
 
 .footer {
@@ -1168,8 +1277,8 @@
 
 .social-sites__image {
   fill: #B3B3B3;
-  width: 1.1111111111rem;
-  height: 1rem;
+  width: 20px;
+  height: 18px;
 }
 .social-sites__image:hover {
   fill: black;
@@ -1255,6 +1364,12 @@ body {
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
 li {
@@ -1275,7 +1390,6 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: normal;
 }
 
 a {

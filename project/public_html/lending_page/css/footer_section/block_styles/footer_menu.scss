@@ -1,8 +1,12 @@
 
 .footer__menu {
     background-color: white;
-    height: rem(90px);
+    height: 93px;
     width: 100%;
+
+    @include phones {
+        height: 151px;
+    }
 }
 
 .footer-container {
@@ -27,16 +31,24 @@
         @include phones {
             align-items: center;
             justify-content: space-between;
+            font-size: 21px;
+            margin-bottom: 12px;
         }
 
         .adress-text {
             line-height: rem(24px);
             color: #292929;
+            font-size: 21px;
+
+            @include phones {
+                margin-bottom: 12px;
+            }
         }
 
         .phone-number {
             line-height: rem(21px);
             color: #497870;
+            font-size: 21px;
         }
     }
 }

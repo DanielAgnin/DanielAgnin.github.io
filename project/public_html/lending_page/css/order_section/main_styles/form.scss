@@ -125,6 +125,7 @@
             margin-bottom: rem(5px);
             text-align: center;
             align-items: center;
+            justify-content: center;
 
             @include phones {
                 flex-wrap: nowrap;
@@ -149,6 +150,14 @@
             @include phones {
                 margin-top: rem(-15px);
             }
+        }
+    }
+
+    .form__radio {
+
+        @include phones {
+            display: flex;
+            justify-content: center;
         }
     }
 }
