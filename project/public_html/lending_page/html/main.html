@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="../css/main.css">
     <title>
         Chocco
@@ -261,139 +262,283 @@
         <section class="section products" id="products">
             <div class="container products-container">
 
-                <div class="slide">
-                    <aside class="swift swift-left">
-                        <svg class="swift-left__arrow">
-                            <use xlink:href="../images/sprite.svg#arrow"></use>
+                <div class="slider-arrows">
+                    <a href="#" class="arrow arrow-left">
+                        <svg class="arrow-left__image">
+                            <use xlink:href="../images/sprite.svg#arrow"></use> 
                         </svg>
-                    </aside>
+                    </a>
+                    <a href="#" class="arrow arrow-right">
+                        <svg class="arrow-right__image">
+                            <use xlink:href="../images/sprite.svg#arrow"></use> 
+                        </svg>
+                    </a>
+                </div>
 
-                    <div class="products__maincontent">
+                <div class="slider">
 
-                        <div class="products__image-block">
-                            <img src="../images/first_product.svg" alt="granola vinegar" class="image-block__image">
-                        </div>
-
-                        <div class="products__text-block">
-                            <div class="products__drop-down-menu">
-                                <div class="drop-down-menu__block">
-                                    <img src="../images/what_is_in.svg" alt="what is in" class="drop-down-menu__image">
-                                    <ul class="drop-down-menu__list">
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#grape"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Виноград
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    25 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#nut"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Грецкий орех
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    32 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#almond"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Кунжутное семя
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    20 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#powder"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Сухое молоко
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    10 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#apitherapy"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Зам. сахара
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    4 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li class="drop-down-menu__item">
-                                            <div href="#" class="drop-down-menu__link">
-                                                <svg class="drop-down-menu__icon">
-                                                    <use xlink:href="../images/sprite.svg#beans"></use>
-                                                </svg>
-                                                <span class="drop-down-menu__ingredient">
-                                                    Какао бобы
-                                                </span>
-                                                <span class="drop-down-menu__ingredient-quantity">
-                                                    4 г
-                                                </span>
-                                            </div>
-                                        </li>
-                                    </ul>
+                    <div class="slide">
+    
+                        <div class="products__maincontent">
+    
+                            <div class="products__image-block">
+                                <img src="../images/first_product.svg" alt="granola vinegar" class="image-block__image">
+                            </div>
+    
+                            <div class="products__text-block">
+                                <div class="products__drop-down-menu">
+                                    <div class="drop-down-menu__block">
+                                        <img src="../images/what_is_in.svg" alt="what is in" class="drop-down-menu__image">
+                                        <ul class="drop-down-menu__list">
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#grape"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Виноград
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        25 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#nut"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Грецкий орех
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        32 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#almond"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Кунжутное семя
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#powder"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Сухое молоко
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        10 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#apitherapy"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Зам. сахара
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#beans"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Какао бобы
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h2 class="products__product-name">
+                                    БАТОНЧИК "ГРАНОЛА ВИНОГРАД"
+                                </h2>
+                                <div class="products__product-desc">
+                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое
+                                    молоко, заменитель сахара и какао бобы.
+                                </div>
+                                <div class="products__health-stat">
+                                    <p class="health-stat__kkal">
+                                        Калорийность <span class="kkal">110 ккал</span>
+                                    </p>
+                                    <p class="health-stat__weight">
+                                        Вес <span class="weight">95 грамм</span>
+                                    </p>
+                                </div>
+                                <div class="products__order-block">
+                                    <span class="order-block__price">
+                                        140 ₽
+                                    </span>
+                                    <a href="#" class="order-button  order-button--theme--green products__order-button">
+                                        <span class="order-button__text">
+                                            ЗАКАЗАТЬ
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
-                            <h2 class="products__product-name">
-                                БАТОНЧИК "ГРАНОЛА ВИНОГРАД"
-                            </h2>
-                            <div class="products__product-desc">
-                                Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое
-                                молоко, заменитель сахара и какао бобы.
-                            </div>
-                            <div class="products__health-stat">
-                                <p class="health-stat__kkal">
-                                    Калорийность <span class="kkal">110 ккал</span>
-                                </p>
-                                <p class="health-stat__weight">
-                                    Вес <span class="weight">95 грамм</span>
-                                </p>
-                            </div>
-                            <div class="products__order-block">
-                                <span class="order-block__price">
-                                    140 ₽
-                                </span>
-                                <a href="#" class="order-button  order-button--theme--green products__order-button">
-                                    <span class="order-button__text">
-                                        ЗАКАЗАТЬ
-                                    </span>
-                                </a>
-                            </div>
+    
                         </div>
 
                     </div>
 
-                    <aside class="swift swift-right">
-                        <svg class="swift-right__arrow">
-                            <use xlink:href="../images/sprite.svg#arrow"></use>
-                        </svg>
-                    </aside>
+                    <div class="slide">
+    
+                        <div class="products__maincontent">
+    
+                            <div class="products__image-block">
+                                <img src="../images/bar_sea_grass.svg" alt="granola vinegar" class="image-block__image">
+                            </div>
+    
+                            <div class="products__text-block">
+                                <div class="products__drop-down-menu">
+                                    <div class="drop-down-menu__block">
+                                        <img src="../images/what_is_in.svg" alt="what is in" class="drop-down-menu__image">
+                                        <ul class="drop-down-menu__list drop-down-menu__sea-grass">
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#oat"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Овёс
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        25 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#seaweed"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Морские водоросли
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        15 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#almond"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Миндаль
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#powder"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Сухое молоко
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        10 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#seeds"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Тыквенные семечки
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#apitherapy"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Зам. сахара
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li class="drop-down-menu__item">
+                                                <div href="#" class="drop-down-menu__link">
+                                                    <svg class="drop-down-menu__icon">
+                                                        <use xlink:href="../images/sprite.svg#beans"></use>
+                                                    </svg>
+                                                    <span class="drop-down-menu__ingredient">
+                                                        Какао бобы
+                                                    </span>
+                                                    <span class="drop-down-menu__ingredient-quantity">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h2 class="products__product-name">
+                                    БАТОНЧИК “МОРСКИЕ ВОДОРОСЛИ”
+                                </h2>
+                                <div class="products__product-desc">
+                                    Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </div>
+                                <div class="products__health-stat">
+                                    <p class="health-stat__kkal">
+                                        Калорийность <span class="kkal">120 ккал</span>
+                                    </p>
+                                    <p class="health-stat__weight">
+                                        Вес <span class="weight">98 грамм</span>
+                                    </p>
+                                </div>
+                                <div class="products__order-block">
+                                    <span class="order-block__price">
+                                        140 ₽
+                                    </span>
+                                    <a href="#" class="order-button  order-button--theme--green products__order-button">
+                                        <span class="order-button__text">
+                                            ЗАКАЗАТЬ
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -556,19 +701,19 @@
                                 <img src="../images/boy_1.svg" alt="beautiful girl" class="reviews-display__avatar">
                                 <div class="reviews-display__review">
                                     <h3 class="review__title">
-                                        Лучший перекус
+                                        Идеально подходят для спортсменов
                                     </h3>
                                     <div class="review__text">
                                         <p>
-                                            Я ем малыми порциями, но часто. Это повышает мою
-                                            продуктивность в разы. В течение дня сижу за компьютером
-                                            и часто отходить в кафе или на кухню просто не могу себе
-                                            позволить. А батончик – он всегда под рукой. Это приятно
-                                            и удобно.
+                                            После тренировок всегда хочется быстро закинуться чем-то
+                                            белковым, потому что до дома ещё нужно доехать. А кушать
+                                            хочется. Протеиновые батончики всегда выручают в этом плане.
+                                            Спасибо производителю за этот качественный и экологичный
+                                            продукт. 
                                         </p>
                                     </div>
                                     <span class="review__name">
-                                        Алёна Хмельницкая
+                                        Вадим Грачёв
                                     </span>
                                 </div>
                             </li>
@@ -577,15 +722,15 @@
                                 <img src="../images/girl_2.svg" alt="beautiful girl" class="reviews-display__avatar">
                                 <div class="reviews-display__review">
                                     <h3 class="review__title">
-                                        Лучший перекус
+                                        Лучшие батончики премиум уровня
                                     </h3>
                                     <div class="review__text">
                                         <p>
-                                            Я ем малыми порциями, но часто. Это повышает мою
-                                            продуктивность в разы. В течение дня сижу за компьютером
-                                            и часто отходить в кафе или на кухню просто не могу себе
-                                            позволить. А батончик – он всегда под рукой. Это приятно
-                                            и удобно.
+                                            Батончики понравились. На мой взгляд слегка завышена цена
+                                            по сравнению с конкурентами, однако, как говорится – оно того
+                                            стоит. Нравится носить с собой, нравится держать в руке. Ну и
+                                            конечно же, кушать. Идеально утоляют голод, хоть и не надолго.
+                                            Через час уже ем ещё один. Но это скорее плюс, чем минус.
                                         </p>
                                     </div>
                                     <span class="review__name">
@@ -600,19 +745,19 @@
 
                     <ul class="reviews-block__reviews-switcher">
                         <li class="rewiews-switcher__item interactive-avatar active" data-open="one">
-                            <a href="#" class="interactive-avatar__link">
+                            <a href="#" class="interactive-avatar__link" data-id="0">
                                 <img src="../images/girl_1_switcher.svg" alt="commenting girl"
                                     class="interactive-avatar__image active">
                             </a>
                         </li>
                         <li class="rewiews-switcher__item interactive-avatar" data-open="two">
-                            <a href="#" class="interactive-avatar__link">
+                            <a href="#" class="interactive-avatar__link" data-id="1">
                                 <img src="../images/boy_1_switcher.svg" alt="commenting girl"
                                     class="interactive-avatar__image">
                             </a>
                         </li>
                         <li class="rewiews-switcher__item interactive-avatar" data-open="three">
-                            <a href="#" class="interactive-avatar__link">
+                            <a href="#" class="interactive-avatar__link" data-id="2">
                                 <img src="../images/girl_2_switcher.svg" alt="commenting boy"
                                     class="interactive-avatar__image">
                             </a>
@@ -809,7 +954,9 @@
         </ul>
     </nav>
 
-    <script src="../script/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../script/slider.js"></script>
     <script src="../script/navigation_menu.js"></script>
     <script src="../script/accordeon.js"></script>
     <script src="../script/tabs.js"></script>

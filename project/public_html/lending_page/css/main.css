@@ -453,9 +453,6 @@
 }
 
 .products-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 1000px !important;
 }
 @media screen and (max-width: 768px) {
@@ -469,6 +466,45 @@
   }
 }
 
+.arrow-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.arrow-left .arrow-left__image {
+  height: 30px;
+  width: 30px;
+  transform: rotate(180deg);
+}
+
+.arrow-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.arrow-right .arrow-right__image {
+  height: 30px;
+  width: 30px;
+}
+
+.bx-wrapper {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 100vh;
+}
+
 .slide {
   display: flex;
   flex-direction: row;
@@ -476,53 +512,7 @@
   font-family: "Alegreya Sans";
   font-style: normal;
   font-weight: normal;
-  width: 95%;
-  height: 100vh;
-}
-.slide .swift {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .slide .swift {
-    transform: translateY(-10%);
-  }
-}
-.slide .swift .swift-left__arrow {
-  overflow: visible;
-  height: 1.5rem;
-  width: 0.7777777778rem;
-  fill: #292929;
-  transform: scale(-1, 1);
-  position: absolute;
-}
-.slide .swift .swift-left__arrow:hover {
-  cursor: pointer;
-}
-.slide .swift .swift-right__arrow {
-  overflow: visible;
-  height: 1.5rem;
-  width: 0.7777777778rem;
-  fill: #292929;
-}
-@media screen and (max-width: 920px) {
-  .slide .swift .swift-right__arrow {
-    position: absolute;
-  }
-}
-@media screen and (max-width: 768px) {
-  .slide .swift .swift-right__arrow {
-    position: absolute;
-  }
-}
-@media screen and (max-width: 480px) {
-  .slide .swift .swift-right__arrow {
-    position: absolute;
-  }
-}
-.slide .swift .swift-right__arrow:hover {
-  cursor: pointer;
+  position: relative;
 }
 .slide .products__maincontent {
   display: flex;
@@ -598,8 +588,6 @@
   width: 91px;
   position: relative;
   display: flex;
-}
-.slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block:hover {
   cursor: pointer;
 }
 .slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block:hover .drop-down-menu__list {
@@ -625,11 +613,11 @@
 .slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block .drop-down-menu__list:before {
   position: absolute;
   content: "";
-  cursor: default;
+  cursor: pointer;
   background-color: transparent;
   transform: translateX(-50%);
   height: 91px;
-  width: 91px;
+  width: 18px;
 }
 .slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block .drop-down-menu__list:before:hover .drop-down-menu__list {
   display: flex;
@@ -660,9 +648,15 @@
 }
 .slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block .drop-down-menu__list .drop-down-menu__item .drop-down-menu__link .drop-down-menu__ingredient {
   color: black;
+  text-align: left;
+  width: 60%;
+  font-size: 0.8888888889rem;
 }
 .slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block .drop-down-menu__list .drop-down-menu__item .drop-down-menu__link .drop-down-menu__ingredient-quantity {
   color: black;
+}
+.slide .products__maincontent .products__text-block .products__drop-down-menu .drop-down-menu__block .drop-down-menu__sea-grass {
+  height: 22.1111111111rem;
 }
 .slide .products__maincontent .products__text-block .products__product-name {
   margin-bottom: 0.5555555556rem;
@@ -821,12 +815,19 @@
   margin-bottom: 5px;
   cursor: pointer;
 }
+.team__list .team__item .team__member .team__name {
+  -webkit-user-select: none;
+          user-select: none;
+}
 .team__list .team__item .team__member .team__link {
   fill: #365A49;
   transform: rotate(90deg);
   height: 9px;
   width: 9px;
   margin-left: 5px;
+}
+.team__list .team__item .team__member .team__link.active {
+  transform: rotate(270deg);
 }
 
 .reviews-display__list {
@@ -840,7 +841,6 @@
   background-color: #F8FAF9;
   position: absolute;
   opacity: 0;
-  transition: 0.3s;
   pointer-events: none;
 }
 @media screen and (max-width: 768px) {

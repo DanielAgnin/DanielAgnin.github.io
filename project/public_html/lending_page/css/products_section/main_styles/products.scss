@@ -6,9 +6,6 @@
 }
 
 .products-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     max-width: 1000px !important;
 
     @include tablets { 
@@ -20,6 +17,47 @@
     }
 }
 
+.arrow-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1000;
+
+    .arrow-left__image {
+        height: 30px;
+        width: 30px;
+        transform: rotate(180deg);
+    }
+}
+
+.arrow-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1000;
+
+    .arrow-right__image {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 100vh;
+}
+
 .slide {
     display: flex;
     flex-direction: row;
@@ -27,54 +65,7 @@
     font-family: 'Alegreya Sans';
     font-style: normal;
     font-weight: normal;
-    width: 95%;
-    height: 100vh;
-
-    .swift {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        @include tablets {
-            transform: translateY(-10%);
-        }
-
-        .swift-left__arrow {
-            overflow: visible;
-            height: rem(27px);
-            width: rem(14px);
-            fill: #292929;
-            transform: scale(-1, 1);
-            position: absolute;
-        
-            &:hover {
-                cursor: pointer;
-            }
-        }
-        
-        .swift-right__arrow {
-            overflow: visible;
-            height: rem(27px);
-            width: rem(14px);
-            fill: #292929;
-
-            @include products-breakpoint {
-                position: absolute;
-            }   
-
-            @include tablets {
-                position: absolute;
-            }
-
-            @include phones {
-                position: absolute;
-            }
-        
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
+    position: relative;
 
     .products__maincontent {
         display: flex;
@@ -143,9 +134,9 @@
                     width: 91px;
                     position: relative;
                     display: flex;
+                    cursor: pointer;
                     
                     &:hover {
-                        cursor: pointer;
 
                         .drop-down-menu__list {
                             display: flex;
@@ -173,11 +164,11 @@
                         &:before {
                             position: absolute;
                             content: "";
-                            cursor: default;
+                            cursor: pointer;
                             background-color: transparent;
                             transform: translateX(-50%);
                             height: 91px;
-                            width: 91px;
+                            width: 18px;
 
                             &:hover {
                                 .drop-down-menu__list {
@@ -215,6 +206,9 @@
 
                                 .drop-down-menu__ingredient {
                                     color: black;
+                                    text-align: left;
+                                    width: 60%;
+                                    font-size: rem(16px);
                                 }
 
                                 .drop-down-menu__ingredient-quantity {
@@ -222,6 +216,10 @@
                                 }
                             }
                         }
+                    }
+
+                    .drop-down-menu__sea-grass {
+                        height: rem(398px);
                     }
                 }
             }

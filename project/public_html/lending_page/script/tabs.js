@@ -9,10 +9,15 @@ $(".interactive-avatar__link").click((e) => {
     e.preventDefault();
 
     const $this = $(e.currentTarget);
-    const target = $this.attr("data-open");
-    const itemToShow = findBlockByAlias(target);
-    const currentItem = $this.closest(".rewiews-switcher__item");
+    const target = $this.attr("data-id");
+    //const itemToShow = findBlockByAlias(target);
 
-    itemToShow.addClass("active").siblings().removeClass("active");
+    const allSlides = $(".reviews-display__item");
+
+    Array.from(allSlides).forEach(slide => slide.classList.remove("active"));
+    allSlides[target].classList.add("active");
+
+    const currentItem = $this.closest(".rewiews-switcher__item");
+    //itemToShow.addClass("active").siblings().removeClass("active");
     currentItem.addClass("active").siblings().removeClass("active");
 });
