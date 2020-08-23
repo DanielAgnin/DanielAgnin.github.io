@@ -13,11 +13,15 @@
     margin-bottom: rem(50px);
 }
 
-.team__list {
+#team-list__widescreens {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include tablets {
+        display: none;
+    }
 
     .team__item {
         margin: 0;
@@ -58,5 +62,13 @@
                 }
             }
         }
+    }
+}
+
+#team-list__tablets {
+    display: none;
+
+    @include tablets {
+        display: flex;
     }
 }

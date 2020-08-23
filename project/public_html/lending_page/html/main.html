@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="../css/main.css">
     <title>
         Chocco
@@ -552,7 +553,115 @@
                     КОМАНДА
                 </h2>
 
-                <ul class="team__list">
+                <ul class="team__list" id="team-list__widescreens">
+
+                    <li class="team__item" id="boris">
+                        <img src="../images/team/boris.svg" alt="boris" class="team__image">
+
+                        <div class="team__member">
+                            <h4 class="team__name">
+                                Борис Федорович
+                            </h4>
+                            <svg class="team__link" id="linkBoris">
+                                <use xlink:href="../images/sprite.svg#play"></use>
+                            </svg>
+                        </div>
+
+                        <div class="team__desc" id="descBoris">
+                            <div class="team__desc-block">
+                                <h5 class="team__post">
+                                    Главный технолог
+                                </h5>
+                                <p class="team__duties">
+                                    Отвечает за вкусовые качества
+                                    и калорийность.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="team__item" id="alla">
+                        <img src="../images/team/alla.svg" alt="alla" class="team__image">
+
+                        <div class="team__member">
+                            <h4 class="team__name">
+                                Алла Иванова
+                            </h4>
+                            <svg class="team__link" id="linkAlla">
+                                <use xlink:href="../images/sprite.svg#play"></use>
+                            </svg>
+                        </div>
+
+                        <div class="team__desc" id="descAlla">
+                            <div class="team__desc-block">
+                                <h5 class="team__post">
+                                    Специалист по упаковке
+                                </h5>
+                                <p class="team__duties">
+                                    Автор запоминающегося стиля
+                                    наших батончиков.
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="team__item" id="kirill">
+                        <img src="../images/team/kirill.svg" alt="kirill" class="team__image">
+
+                        <div class="team__member">
+                            <h4 class="team__name">
+                                Кирилл Матросов
+                            </h4>
+                            <svg class="team__link" id="linkKirill">
+                                <use xlink:href="../images/sprite.svg#play"></use>
+                            </svg>
+                        </div>
+
+                        <div class="team__desc" id="descKirill">
+                            <div class="team__desc-block">
+                                <h5 class="team__post">
+                                    Оператор
+                                </h5>
+                                <p class="team__duties">
+                                    С радостью поможет
+                                    подобрать батончики и
+                                    оформить заказ.
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="team__item" id="mila">
+                        <img src="../images/team/mila.svg" alt="mila" class="team__image">
+
+                        <div class="team__member">
+                            <h4 class="team__name">
+                                Мила Рыжкова
+                            </h4>
+                            <svg class="team__link" id="linkMila">
+                                <use xlink:href="../images/sprite.svg#play"></use>
+                            </svg>
+                        </div>
+
+                        <div class="team__desc" id="descMila">
+                            <div class="team__desc-block">
+                                <h5 class="team__post">
+                                    PR, маркетинг
+                                </h5>
+                                <p class="team__duties">
+                                    По всем вопросам сотрудничества
+                                    и рекламы писать только Миле.
+                                </p>
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="team__list" id="team-list__tablets">
 
                     <li class="team__item" id="boris">
                         <img src="../images/team/boris.svg" alt="boris" class="team__image">
@@ -734,7 +843,7 @@
                                         </p>
                                     </div>
                                     <span class="review__name">
-                                        Алёна Хмельницкая
+                                        Мария Орлова
                                     </span>
                                 </div>
                             </li>
@@ -772,11 +881,23 @@
         <section class="section order-section section--font-color--green" id="order">
             <div class="container order-container">
 
+                <div class="modal" id="modal">
+                    <div class="modal__container">
+                        <h6 class="modal__text">
+                            Сообщение отправлено
+                        </h6>
+                        <a class="modal__close-button">
+                            <span class="close-button__text">Закрыть</span>
+                        </a>
+                    </div>
+                </div>
+
                 <h2 class="section-title order-section-title">
                     ЗАКАЖИТЕ ДОСТАВКУ
                 </h2>
 
                 <form class="form">
+                    <input type="hidden" name="to" value="somewhere@gmail.com">
                     <div class="form__column">
                         <div class="form__row">
                             <label class="form__block">
@@ -789,7 +910,7 @@
                                 <span class="form__title">
                                     Телефон
                                 </span>
-                                <input type="text" class="form__input" name="phone-number">
+                                <input type="text" class="form__input" name="phone">
                             </label>
                         </div>
                         <div class="form__row">
@@ -833,7 +954,7 @@
                                 <span class="form__title">
                                     Комментарий
                                 </span>
-                                <textarea class="form__input form__input--textarea"></textarea>
+                                <textarea class="form__input form__input--textarea" name="comment"></textarea>
                             </label>
                         </div>
                         <div class="form__controls form__radio">
@@ -954,12 +1075,14 @@
         </ul>
     </nav>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="../script/slider.js"></script>
     <script src="../script/navigation_menu.js"></script>
     <script src="../script/accordeon.js"></script>
     <script src="../script/tabs.js"></script>
+    <script src="../script/modal.js"></script>
 </body>
 
 </html>

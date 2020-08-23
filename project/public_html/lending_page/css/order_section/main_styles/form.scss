@@ -1,6 +1,10 @@
 
 @import "../block_styles/radio";
 
+input {
+    cursor: pointer;
+}
+
 .order-section {
     background-image: url("../images/pattern_3.png");
     background-size: cover;
@@ -49,6 +53,83 @@
 
             @include phones {
                 margin: 0;
+            }
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 100000;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    
+    &.modal-error {
+        color: red;
+    }
+
+    .modal__container {
+        margin: auto;
+        background: #ffffff;
+        padding: rem(20px);
+        width: rem(309px);
+        height: rem(176px);
+        position: static;
+        margin-top: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .modal__text {
+            font-family: Alegreya Sans;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .modal__close-button {
+            font-size: rem(19px);
+            font-weight: bold;
+            max-width: rem(85px);
+            margin-top: rem(32px);
+            padding: rem(18px) rem(35px);
+            text-transform: uppercase;
+            border-radius: 100px;
+            line-height: 1;
+            text-decoration: none;
+            font-family: 'Alegreya Sans';
+            user-select: none;
+            border: none;
+            outline: none;
+            text-align: center;
+            background-color:#0b4d3c;
+            color: white;
+            padding: 0;
+            max-width: rem(156px);
+            width: rem(156px);
+            height: rem(60px);
+            cursor: pointer;
+
+            &:hover {
+                background-color: white;
+                color: #0b4d3c;
+                transition: 0.2s;
+            }
+
+            .close-button__text {
+                position: absolute;
+                transform: translate(-50%, 100%);
             }
         }
     }
@@ -104,6 +185,11 @@
                     &:focus {
                         border-color: #dee2bd;
                         outline: none;
+                    }
+
+                    &.input-error {
+                        border-color: hotpink;
+                        border-radius: 3px;
                     }
                 }
     
