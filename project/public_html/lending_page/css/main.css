@@ -753,6 +753,15 @@
   position: absolute;
   max-width: 220px;
 }
+@media screen and (max-width: 768px) {
+  .team__desc {
+    position: static;
+  }
+}
+.team__desc .team__image {
+  margin-bottom: 1.1111111111rem;
+  width: 12.2222222222rem;
+}
 
 .team__desc-block {
   font-family: "Alegreya Sans";
@@ -764,15 +773,43 @@
   font-family: Alegreya Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+  margin-bottom: 0.2777777778rem;
 }
 .team__desc-block .team__duties {
   color: #666666;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.2222222222rem;
+}
+
+.team {
+  position: relative;
+}
+.team:before {
+  content: url("../images/blackberries.svg");
+  position: absolute;
+  right: 1%;
+  top: -4%;
+  z-index: 100;
+}
+@media screen and (max-width: 480px) {
+  .team:before {
+    display: none;
+  }
+}
+.team:after {
+  content: url("../images/berries_6.svg");
+  position: absolute;
+  left: 1%;
+  bottom: -5%;
+  z-index: 100;
+}
+@media screen and (max-width: 480px) {
+  .team:after {
+    display: none;
+  }
 }
 
 .team-container {
@@ -781,6 +818,7 @@
   justify-content: center;
   width: 95%;
   height: 100vh;
+  position: relative;
 }
 
 .team__title {
@@ -841,7 +879,43 @@
 @media screen and (max-width: 768px) {
   #team-list__tablets {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+}
+#team-list__tablets .team__item {
+  margin: 0;
+  padding: 0;
+  max-width: 220px;
+  margin-bottom: 10px;
+}
+#team-list__tablets .team__item .team__member {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1666666667rem;
+  line-height: 1.3888888889rem;
+  color: #292929;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#team-list__tablets .team__item .team__member .team__name {
+  -webkit-user-select: none;
+          user-select: none;
+}
+#team-list__tablets .team__item .team__member .team__link {
+  fill: #365A49;
+  transform: rotate(90deg);
+  height: 9px;
+  width: 9px;
+  margin-left: 5px;
+}
+#team-list__tablets .team__item .team__member .team__link.active {
+  transform: rotate(270deg);
 }
 
 .reviews-display__list {
