@@ -1,8 +1,11 @@
 
 .footer__menu {
     background-color: white;
+    position: absolute;
+    bottom: 0;
     height: 93px;
     width: 100%;
+    z-index: 200;
 
     @include phones {
         height: 151px;
@@ -49,6 +52,7 @@
             line-height: rem(21px);
             color: #497870;
             font-size: 21px;
+            width: fit-content;
         }
     }
 }

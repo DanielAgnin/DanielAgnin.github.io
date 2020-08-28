@@ -1,0 +1,77 @@
+
+.bars-menu-section {
+    font-family: "Alegreya Sans";
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    color: white;
+    background: url("../images/menu_background.png") center center/cover no-repeat;
+
+    .bars-menu__main-title {
+        font-weight: bold;
+        font-size: rem(48px);
+        line-height: rem(58px);
+        margin-top: 7%;
+        margin-left: 5%;
+    }
+
+    .bars-menu__list {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        display: flex;
+
+        .bars-menu__item {
+            display: flex;
+            position: relative;
+
+            .bars-menu__title {
+                max-width: rem(100px);
+                display: flex;
+                flex-direction: column-reverse;
+
+                .bars-menu__image {
+                    position: absolute;
+                    height: 100%;
+                }
+
+                .bars-menu__title-text {
+                    color: white;
+                    transform: rotate(-90deg);
+                    padding-bottom: 50%;
+                    margin-bottom: rem(40px);
+                    margin-left: 50%;
+                    font-size: rem(48px);
+                    white-space: nowrap;
+
+                    &.last {
+                        padding-bottom: 0;
+                        margin-bottom: rem(90px);
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .bars-menu__text-block {
+                width: 0;
+                overflow: hidden;
+                background: rgba(51, 53, 55, 0.8);
+                backdrop-filter: blur(10px);
+                transition: 0.7s;
+                position: relative;
+                background-attachment: scroll;
+
+                .bars-menu__text {
+                    padding-top: rem(30px);
+                    padding-left: rem(30px);
+                    padding-right: 80px;
+
+                    @include tablets {
+                        padding-right: rem(30px);
+                    }
+                }
+            }
+        }
+    }
+}

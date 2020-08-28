@@ -59,6 +59,9 @@ $phones: 480px;
 @import "../css/team_section/main_styles/team.scss";
 
 
+@import "../css/bars_menu_section/bars_menu.scss";
+
+
 @import "../css/reviews_section/main_styles/reviews";
 
 
@@ -87,11 +90,11 @@ html {
     }
 }
 
-html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .wrapper {
