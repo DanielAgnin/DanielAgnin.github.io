@@ -95,6 +95,10 @@
                 align-items: center;
             }
 
+            @include smallPhones {
+                margin-top: -50px;
+            }
+
             .image-block__image {
                 max-width: rem(545px);
                 max-height: rem(470px);

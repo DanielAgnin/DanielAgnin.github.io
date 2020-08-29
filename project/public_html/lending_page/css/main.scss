@@ -28,6 +28,7 @@ $darkGreen: #0b4d3c;
 
 $tablets: 768px;
 $phones: 480px;
+$smallPhones: 360px;
 
 @mixin tablets {
     @media screen and (max-width: $tablets) {
@@ -37,6 +38,12 @@ $phones: 480px;
 
 @mixin phones {
     @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin smallPhones {
+    @media screen and (max-width: $smallPhones) {
         @content;
     }
 }
@@ -89,6 +96,10 @@ html {
     @include phones {
         font-size: $baseFontSize - 4px;
     }
+
+    @include smallPhones {
+        font-size: $baseFontSize - 7px;
+    }
 }
 
 body {
@@ -108,7 +119,7 @@ body {
 .maincontent {
     height: 100%;
     transform: translateY(0);
-    transition: transform 1s;
+    transition: transform 0.7s;
     will-change: transform;
 }
 
@@ -161,7 +172,7 @@ p {
 }
 
 .section {
-    height: 100vh;
+    height: 100%;
 }
 
 .section--font-color--green {
@@ -235,7 +246,6 @@ p {
             color: $darkGreen;
             transition: 0.2s;
         }
-
     }
 }
 
