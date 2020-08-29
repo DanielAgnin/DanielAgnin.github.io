@@ -930,8 +930,8 @@
   font-weight: bold;
   font-size: 2.6666666667rem;
   line-height: 3.2222222222rem;
-  margin-top: 7%;
-  margin-left: 5%;
+  padding-top: 7%;
+  padding-left: 5%;
 }
 .bars-menu-section .bars-menu__list {
   position: absolute;
@@ -1566,6 +1566,7 @@ input {
 
 /*Базовые стили для всей страницы*/
 html {
+  height: 100%;
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
@@ -1587,16 +1588,23 @@ body {
 }
 
 .wrapper {
+  position: relative;
   width: 100%;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.maincontent {
+  height: 100%;
+  transform: translateY(0);
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .container {
   width: 95%;
   max-width: 940px;
-  min-height: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -1642,7 +1650,6 @@ p {
 
 .section {
   height: 100vh;
-  min-height: 36.1111111111rem;
 }
 
 .section--font-color--green {
