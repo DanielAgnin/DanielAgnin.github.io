@@ -961,6 +961,33 @@
 
             <!--Секция "Как мы работаем"-->
             <section data-sidemenu-theme="black" data-section-id="how" class="section how" id="how">
+                <div class="container how-container">
+
+                    <h2 class="section-title how__title">
+                        КАК МЫ РАБОТАЕМ
+                    </h2>
+
+                    <div class="player-container">
+                        <div class="player">
+                            <div class="player__wrapper">
+                                <div id="yt-player" class="player__elem"></div>
+                                <div class="player__splash"></div>
+                            </div>
+                            <div class="player__controls">
+                                <a href="#" class="player__start"></a>
+                                <div class="player__playback">
+                                    <a class="player__playback-button"></a>
+                                </div>
+                                <div class="player__volume">
+                                    <a class="player__volume-button"></a>
+                                    <div class="player__volume-playback">
+                                        <a class="player__volume-playback--button"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!--Секция "Закажите доставку"-->
@@ -1186,6 +1213,9 @@
     <script src="../script/jquery.touchSwipe.js"></script>
     <!--Подключение TouchSwipe для настройки свайпов на мобильных устройствах-->
 
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!--Подключение API YouTube-->
+
     <script src="../script/slider.js"></script>
     <!--Настройка слайдера-->
 
@@ -1209,6 +1239,8 @@
 
     <script src="../script/one_page_scroll.js"></script>
     <!--One Page Scroll-->
+
+    <script src="../script/player.js"></script>
 
 </body>
 

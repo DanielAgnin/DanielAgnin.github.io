@@ -1145,6 +1145,198 @@
   top: 2.7777777778rem;
   z-index: 30;
 }
+.how {
+  position: relative;
+}
+.how:before {
+  position: absolute;
+  content: url("../images/blackberries_with_leaves.svg");
+  bottom: -10%;
+  right: 0;
+  z-index: 200;
+}
+@media screen and (max-width: 768px) {
+  .how:before {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .how {
+    font-size: 7px;
+  }
+}
+
+.how-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.how-container:before {
+  position: absolute;
+  content: url("../images/small_leaf.svg");
+  top: 20%;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .how-container:before {
+    display: none;
+  }
+}
+.how-container:after {
+  position: absolute;
+  content: url("../images/leaf_2.svg");
+  bottom: 10%;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .how-container:after {
+    display: none;
+  }
+}
+.how-container .how__title {
+  padding-bottom: 1.7rem;
+}
+
+.player-container {
+  width: 36.7777777778rem;
+  height: 21.7777777778rem;
+}
+@media screen and (max-width: 480px) {
+  .player-container {
+    width: 22.2222222222rem;
+    height: 13.8888888889rem;
+  }
+}
+.player-container .player {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.player-container .player .player__wrapper {
+  width: 100%;
+  height: 100%;
+}
+.player-container .player .player__wrapper .player__elem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.player-container .player .player__wrapper .player__splash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/video_background.png");
+  background-size: cover;
+  cursor: pointer;
+}
+.player-container .player .player__wrapper .player__splash:before {
+  content: url("../images/triangle.svg");
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  height: 6.1111111111rem;
+}
+@media screen and (max-width: 480px) {
+  .player-container .player .player__wrapper .player__splash:before {
+    top: 20%;
+    left: 40%;
+  }
+}
+.player-container .player .player__controls {
+  background-color: #404040;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1.9444444444rem;
+  padding-left: 1.3888888889rem;
+  padding-right: 1.3888888889rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .player-container .player .player__controls {
+    padding-left: 0.8333333333rem;
+    padding-right: 0.8333333333rem;
+  }
+}
+.player-container .player .player__controls .player__start {
+  width: 1rem;
+  height: 1rem;
+  background: url("../images/small_triangle.svg") no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 480px) {
+  .player-container .player .player__controls .player__start {
+    width: 0.8333333333rem;
+    height: 0.8333333333rem;
+  }
+}
+.player-container .player .player__controls .player__playback {
+  position: relative;
+  width: 24.7583333333rem;
+  height: 0.3333333333rem;
+  background-color: #626262;
+  border-radius: 5px;
+}
+@media screen and (max-width: 480px) {
+  .player-container .player .player__controls .player__playback {
+    width: 11.1111111111rem;
+    height: 0.2222222222rem;
+  }
+}
+.player-container .player .player__controls .player__playback .player__playback-button {
+  position: absolute;
+  background: url("../images/regulator.svg") no-repeat;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+  left: 0;
+  transform: translate(-50%, -20%);
+}
+.player-container .player .player__controls .player__volume {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 5rem;
+}
+.player-container .player .player__controls .player__volume .player__volume-button {
+  width: 0.6666666667rem;
+  height: 0.8333333333rem;
+  background: url("../images/volume.svg") no-repeat;
+  cursor: pointer;
+}
+.player-container .player .player__controls .player__volume .player__volume-button.muted {
+  opacity: 0.3;
+}
+.player-container .player .player__controls .player__volume .player__volume-playback {
+  position: relative;
+  width: 3.3333333333rem;
+  height: 0.3333333333rem;
+  background-color: #626262;
+  border-radius: 5px;
+}
+.player-container .player .player__controls .player__volume .player__volume-playback .player__volume-playback--button {
+  position: absolute;
+  background: url("../images/regulator.svg") no-repeat;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+  left: 100%;
+  transform: translate(-50%, -20%);
+}
+.player-container .player.active .player__splash {
+  display: none;
+}
+.player-container .player.paused .player__start {
+  width: 1rem;
+  height: 1rem;
+  background: url("../images/pause.svg") no-repeat;
+  background-size: cover;
+}
+
 .radio {
   display: flex;
   cursor: pointer;
