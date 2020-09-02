@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*Подключение стилей для блоков секции "hero"*/
+@import url("../block_styles/menu.css");
+@import url("../block_styles/ordering_block.css");
+@import url("../block_styles/product_advantages.css");
+/*Задание переменных*/
+/*Базовый  голубой цвет*/
+/*Размер шрифта для основного текстового контента*/
+/*Базовый тёмно-зелёный цвет*/
+/*Стили для секции "hero"*/
+.hero {
+  background: url(../../../images/chocolate_bars.svg) left 78% center no-repeat, url(../../../images/big_leaf.svg) right 2% bottom 20% no-repeat, url(../../../images/berries_1.svg) right 17% bottom 10% no-repeat, url(../../../images/pattern.svg) right bottom no-repeat;
+  background-color: #61C4D9;
+  height: 100vh;
+  min-height: rem(650px);
+  position: relative;
+}
+.hero:before {
+  position: absolute;
+  content: url(../../../images/berries_2.svg);
+  bottom: -5%;
+  left: 80%;
+}
+.hero:after {
+  position: absolute;
+  content: url(../../../images/smaller_leaf_2.svg);
+  left: 7%;
+  bottom: -4%;
+}
+.hero .hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+.hero .hero__container:before {
+  position: absolute;
+  content: url(../../../images/smaller_leaf_1.svg);
+  bottom: -3%;
+  left: 60%;
+}

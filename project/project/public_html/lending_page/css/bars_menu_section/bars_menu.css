@@ -1,0 +1,8 @@
+.bars-menu-section {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  font-weight: normal;
+  position: relative;
+  color: white;
+  background: url("../images/menu_background.svg") center center/cover no-repeat;
+}

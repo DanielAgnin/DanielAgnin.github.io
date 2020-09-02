@@ -1,0 +1,21 @@
+.product-advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 520px;
+  margin-bottom: 50px;
+}
+.product-advantages .product-advantages__item {
+  width: 166px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+}
+.product-advantages .product-advantages__item .product-advantages-item__text {
+  margin-left: 12px;
+  line-height: 18px;
+  color: white;
+  font-family: "Alegreya Sans";
+  font-size: 18px;
+  line-height: 18px;
+}

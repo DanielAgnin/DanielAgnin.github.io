@@ -1,0 +1,58 @@
+
+.footer__menu {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    height: 93px;
+    width: 100%;
+    z-index: 200;
+
+    @include phones {
+        height: 151px;
+    }
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__adress {
+        font-family: "Alegreya Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(21px);
+        display: flex;
+        flex-direction: column;
+
+        @include phones {
+            align-items: center;
+            justify-content: space-between;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .adress-text {
+            line-height: rem(24px);
+            color: #292929;
+            font-size: 21px;
+
+            @include phones {
+                margin-bottom: 12px;
+            }
+        }
+
+        .phone-number {
+            line-height: rem(21px);
+            color: #497870;
+            font-size: 21px;
+            width: fit-content;
+        }
+    }
+}

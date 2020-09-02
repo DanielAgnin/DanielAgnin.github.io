@@ -1,0 +1,64 @@
+
+@import "../block_styles/reviews_display";
+@import "../block_styles/reviews_switcher";
+
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 100vh;
+
+    .reviews__title {
+        margin-bottom: rem(37px);
+    }
+
+    .reviews-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: rem(940px);
+        height: rem(440px);
+        position: relative;
+    }
+}
+
+.reviews {
+    position: relative;
+    background: url("../images/berries_3.svg") top 22% right 22% no-repeat;
+
+    @include tablets {
+        background: url("../images/berries_3.svg") top 22% right 4% no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url("../images/berries_4.svg");
+        position: absolute;
+        bottom: -8%;
+        z-index: 100;
+
+        @include phones {
+            content: none;
+        }
+    }
+}
+
+.reviews-block {
+
+    &:before {
+        content: url("../images/pattern_2.svg");
+        position: absolute;
+        right: 0;
+        top: rem(50px);
+        z-index: 30;
+
+        @include phones {
+            
+        }
+    } 
+}

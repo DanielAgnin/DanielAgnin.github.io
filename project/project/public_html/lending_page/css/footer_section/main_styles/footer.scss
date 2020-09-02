@@ -1,0 +1,45 @@
+
+@import "../block_styles/footer_menu";
+
+.footer {
+    height: 100vh;
+    width: 100%;
+    min-height: rem(650px);
+    position: relative;
+    z-index: 100;
+}
+
+.footer-container {
+    height: 100%;
+}
+
+.footer__phone-number {
+
+    &:before {
+        content: url("../images/phone_green.svg");
+    }
+}
+
+.footer__social-sites {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.social-sites__item {
+    margin-right: rem(14px);
+}
+
+.social-sites__image {
+    fill: #B3B3B3;
+    width: 20px;
+    height: 18px;
+
+    &:hover {
+        fill: black;
+        transition: 0.2s;
+    }
+}

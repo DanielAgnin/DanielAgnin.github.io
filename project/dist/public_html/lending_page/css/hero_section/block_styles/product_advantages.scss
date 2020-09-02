@@ -1,0 +1,45 @@
+
+.product-advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: rem(520px);
+    margin-bottom: rem(50px);
+
+    @include tablets {
+        display: none;
+    }
+
+    .product-advantages__item {
+        width: rem(166px);
+        height: rem(56px);
+        display: flex;
+        flex-direction: row;
+
+        .product-advantages-item__text {
+            margin-left: rem(12px);
+            line-height: rem(18px);
+            color: white;
+            font-family: 'Alegreya Sans';
+            font-size: rem(18px);
+            line-height: rem(18px);
+        }
+    }
+}
+
+.product-advantages__item-image {
+    overflow: visible;
+    fill: #C6F7FF;
+}
+
+.product-advantages__item-image.leaf {
+    width: rem(43px);
+}
+
+.product-advantages__item-image.truck {
+    width: rem(50px);
+}
+
+.product-advantages__item-image.ruler {
+    width: rem(40px);
+}

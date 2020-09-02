@@ -1,0 +1,35 @@
+@import url("../block_styles/reviews_display.css");
+@import url("../block_styles/reviews_switcher.css");
+.reviews {
+  position: relative;
+  background: url(../../../images/berries_3.svg) top 22% right 22% no-repeat;
+}
+.reviews:before {
+  content: url(../../../images/berries_4.svg);
+  position: absolute;
+  bottom: -8%;
+  z-index: 100;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviews-container .reviews__title {
+  margin-bottom: rem(37px);
+}
+.reviews-container .reviews-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: rem(940px);
+  height: rem(440px);
+  position: relative;
+}
+.reviews-container .reviews-block:before {
+  content: url(../../../images/pattern_2.svg);
+  position: absolute;
+  right: 0;
+  top: rem(50px);
+}

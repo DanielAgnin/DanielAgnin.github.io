@@ -1,0 +1,143 @@
+
+@import "../block_styles/accordeon.scss";
+
+.team {
+    position: relative;
+
+    &:before {
+        content: url("../images/blackberries.svg");
+        position: absolute;
+        right: 1%;
+        top: -4%;
+        z-index: 100;
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: url("../images/berries_6.svg");
+        position: absolute;
+        left: 1%;
+        bottom: -5%;
+        z-index: 100;
+        
+        @include phones {
+            display: none;
+        }
+    }
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 100vh;
+    position: relative;
+}
+
+.team__title {
+    margin-bottom: rem(50px);
+}
+
+#team-list__widescreens {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include tablets {
+        display: none;
+    }
+
+    .team__item {
+        margin: 0;
+        padding: 0;
+        max-width: 220px;
+
+        .team__image {
+            margin-bottom: rem(20px);
+        }
+
+        .team__member {
+            font-family: 'Alegreya Sans';
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(21px);
+            line-height: rem(25px);
+            color: #292929;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+            cursor: pointer;
+
+            .team__name { 
+                user-select: none;
+            }
+
+            .team__link {
+                fill: #365A49;
+                transform: rotate(90deg);
+                height: 9px;
+                width: 9px;
+                margin-left: 5px;
+
+                &.active {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}
+
+#team-list__tablets {
+    display: none;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team__item {
+        margin: 0;
+        padding: 0;
+        max-width: 220px;
+        margin-bottom: 10px;
+
+        .team__member {
+            font-family: 'Alegreya Sans';
+            font-style: normal;
+            font-weight: bold;
+            font-size: rem(21px);
+            line-height: rem(25px);
+            color: #292929;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            .team__name { 
+                user-select: none;
+            }
+
+            .team__link {
+                fill: #365A49;
+                transform: rotate(90deg);
+                height: 9px;
+                width: 9px;
+                margin-left: 5px;
+
+                &.active {
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}

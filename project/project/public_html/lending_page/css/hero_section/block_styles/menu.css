@@ -1,0 +1,55 @@
+.menu {
+  height: 38px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .header-logo {
+  width: 52.6px;
+  color: white;
+  font-family: "Alegreya Sans";
+  text-align: justify;
+  font-size: 28px;
+  line-height: 22px;
+  font-weight: 500;
+}
+.menu .header-navigation {
+  min-width: 640px;
+  margin-top: 7px;
+}
+.menu .header-navigation .header-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.menu .header-navigation .header-list .header-list__item {
+  text-decoration: none;
+}
+.menu .header-navigation .header-list .header-list__item .header-list__link {
+  color: white;
+  font-family: "Alegreya Sans";
+  font-size: 18px;
+  line-height: 30px;
+}
+.menu .header-phone {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.menu .header-phone .header-phone__image {
+  height: 13.9px;
+  margin-top: 3px;
+}
+.menu .header-phone .header-phone__number {
+  color: white;
+  font-family: "Alegreya Sans";
+  font-size: 24px;
+  line-height: 18px;
+  margin-left: 5px;
+}
+.menu .header-phone .header-phone__number:before {
+  content: url(../../../images/phone.svg);
+}

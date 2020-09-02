@@ -1,0 +1,322 @@
+
+@mixin products-breakpoint {
+    @media screen and (max-width: 920px) {
+        @content;
+    }
+}
+
+.products-container {
+    max-width: 1000px !important;
+
+    @include tablets { 
+        max-width: 528px !important;
+    }
+
+    @include phones {
+        max-width: 470px !important;
+    }
+}
+
+.arrow-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1000;
+
+    .arrow-left__image {
+        height: 30px;
+        width: 30px;
+        transform: rotate(180deg);
+    }
+}
+
+.arrow-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    z-index: 1000;
+
+    .arrow-right__image {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+    background: none;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 100vh;
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+
+    .products__maincontent {
+        display: flex;
+        flex-direction: row;
+        max-width: 98%;
+
+        @include products-breakpoint {
+            flex-direction: column;
+        }
+
+        @include tablets {
+            flex-direction: column;
+        }
+
+        .products__image-block {
+            margin-right: rem(40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: rem(100px);
+
+            @include products-breakpoint {
+                align-items: center;
+            }
+
+            @include tablets {
+                align-items: center;
+            }
+
+            @include smallPhones {
+                margin-top: -50px;
+            }
+
+            .image-block__image {
+                max-width: rem(545px);
+                max-height: rem(470px);
+
+                @include phones {
+                    max-width: rem(500px);
+                }
+            }
+        }
+
+        .products__text-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #292929;
+
+            @include products-breakpoint {
+                text-align: center;
+            }
+
+            @include tablets {
+                text-align: center;
+            }
+
+            .products__drop-down-menu {
+                margin-bottom: rem(23px);
+
+                @include products-breakpoint {
+                    display: none;
+                }
+
+                @include tablets {
+                    display: none;
+                }
+
+                .drop-down-menu__block {
+                    width: 91px;
+                    position: relative;
+                    display: flex;
+                    cursor: pointer;
+                    
+                    &:hover {
+
+                        .drop-down-menu__list {
+                            display: flex;
+                        }
+                    }
+
+                    .drop-down-menu__list {
+                        position: absolute;
+                        cursor: default;
+                        transform: translateX(100px);
+                        width: rem(273px);
+                        height: rem(344px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        background-color: 	#cdcdcd;
+                        box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+                        border-radius: 4px;
+                        display: none;
+
+                        &:hover {
+                            display: flex;
+                        }
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            cursor: pointer;
+                            background-color: transparent;
+                            transform: translateX(-50%);
+                            height: 91px;
+                            width: 18px;
+
+                            &:hover {
+                                .drop-down-menu__list {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                        .drop-down-menu__item {
+                            cursor: default;
+                            padding-left: 30px;
+                            padding-right: 25px;
+
+                            &:first-child {
+                                padding-top: 28px;
+                            }
+
+                            &:last-child {
+                                padding-bottom: 28px;
+                            }
+
+                            .drop-down-menu__link {
+                                cursor: default;
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: nowrap;
+                                justify-content: space-between;
+
+                                .drop-down-menu__icon {
+                                    width: 20px;
+                                    height: 20px;
+                                    fill: black;
+                                    cursor: default;
+                                }
+
+                                .drop-down-menu__ingredient {
+                                    color: black;
+                                    text-align: left;
+                                    width: 60%;
+                                    font-size: rem(16px);
+                                }
+
+                                .drop-down-menu__ingredient-quantity {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+
+                    .drop-down-menu__sea-grass {
+                        height: rem(398px);
+                    }
+                }
+            }
+
+            .products__product-name {
+                margin-bottom: rem(10px);
+                font-weight: bold;
+                font-size: rem(36px);
+                line-height: rem(43px);
+                color: #292929;
+
+                @include tablets {
+                    font-size: rem(35px);
+                }
+            }
+
+            .products__product-desc {
+                margin-bottom: rem(40px);
+                font-size: rem(18px);
+                line-height: rem(22px);
+                color: #666666;
+            }
+
+            .products__health-stat {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: rem(32px);
+
+                @include products-breakpoint {
+                    justify-content: center;
+                }
+
+                @include tablets {
+                    justify-content: center;
+                }
+
+                .health-stat__kkal {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include tablets {
+                        width: 30%;
+                    }
+
+                    .kkal {
+                        font-weight: bold;
+                    }
+                }
+
+                .health-stat__weight {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include tablets {
+                        width: 30%;
+                    }
+
+                    .weight {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .products__order-block {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                @include products-breakpoint {
+                    justify-content: center;
+                }
+
+                @include tablets {
+                    justify-content: center;
+                }
+
+                .order-block__price {
+                    color: #151515;
+                    font-weight: 300;
+                    font-size: rem(60px);
+                    line-height: rem(60px);
+                    margin-right: rem(30px);
+                }
+
+                .products__order-button {
+                    margin-top: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

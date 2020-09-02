@@ -1,0 +1,34 @@
+
+/*Стили для блока "headline"*/
+
+.headline {
+    margin-top: rem(100px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .headline__title {
+        color: #292929;
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: bold;
+        font-size: rem(48px);
+        line-height: rem(58px);
+    }
+
+    .headline__subtitle {
+        color: #666666;
+        font-family: 'Alegreya Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: rem(18px);
+        line-height: rem(22px);
+        margin-top: rem(5px);
+        max-width: rem(436px);
+
+        @include phones {
+            max-width: 90%;
+        }
+    }
+}

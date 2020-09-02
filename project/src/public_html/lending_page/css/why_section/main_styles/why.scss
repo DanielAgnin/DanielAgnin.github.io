@@ -1,0 +1,40 @@
+
+/*Подключение стилей блоков секции*/
+
+@import "../block_styles/headline";
+@import "../block_styles/benefits";
+
+
+/*Стили для секции "Почему"*/
+
+.why__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 100vh;
+}
+
+.why {
+    position: relative;
+    background: url("../images/why_pattern.svg") left bottom 40% no-repeat;
+    
+    @include tablets {
+        background: url("../images/why_pattern.svg") left bottom 80% no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+
+    &:before {
+        content: url("../images/raspberry.svg");
+        position: absolute;
+        bottom: rem(-80px);
+        left: 0;
+
+        @include phones {
+            content: none;
+        }
+    }
+}

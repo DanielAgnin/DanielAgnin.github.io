@@ -1,0 +1,85 @@
+
+    .reviews-display__list {
+        position: relative;
+        min-height: 264px;
+    }
+
+        .reviews-display__item {
+            display: flex;
+            flex-direction: row;
+            background-color: #F8FAF9;
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+
+            @include tablets {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                padding-bottom: rem(30px);
+                padding-top: rem(30px);
+                margin-bottom: rem(40px);
+            }
+
+            &.active {
+                opacity: 1;
+                position: static;
+                pointer-events: unset;
+            }
+    
+            .reviews-display__avatar {
+                margin-right: rem(23px);
+                margin-left: rem(42px);
+                height: rem(264px);
+                width: rem(253px);
+                z-index: 60;
+
+                @include tablets {
+                    height: rem(130px);
+                    width: rem(130px);
+                }
+            }
+    
+            .reviews-display__review {
+                display: flex;
+                flex-direction: column;
+    
+                .review__title {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: rem(28px);
+                    line-height: rem(32px);
+                    color: #292929;
+                    margin-top: rem(15px);
+                    z-index: 50;
+                }
+    
+                .review__text {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: rem(18px);
+                    line-height: rem(22px);
+                    color: #666666;
+                    margin-top: rem(22px);
+                    max-width: rem(463px);
+                    z-index: 40;
+
+                    @include tablets {
+                        max-width: 90%;
+                    }
+                }
+    
+                .review__name {
+                    font-family: 'Alegreya Sans';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: rem(18px);
+                    line-height: rem(24px);
+                    color: #292929;
+                    margin-top: rem(25px);
+                }
+            }
+        }
+        

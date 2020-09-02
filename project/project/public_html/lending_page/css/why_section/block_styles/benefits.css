@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/*Стили для блока "benefits"*/
+.benefits-list {
+  margin-top: 53px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.benefits-list .benefits-list__item {
+  text-align: center;
+  position: relative;
+}
+.benefits-list .benefits-list__item:before {
+  content: url(../../../images/why_dots.svg);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: translateX(110%);
+}
+.benefits-list .benefits-list__item:first-child {
+  padding-left: 0;
+}
+.benefits-list .benefits-list__item:last-child {
+  padding-right: 0;
+}
+.benefits-list .benefits-list__item:last-child:before {
+  display: none;
+}
+.benefits-list .benefits-list__item .benefits-item__picture-block {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+.benefits-list .benefits-list__item .benefits-item__picture-block .benefits-item__picture-backgound {
+  height: 128px;
+  width: 128px;
+  border-radius: 100px;
+  background-color: #F2F5F4;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.benefits-list .benefits-list__item .benefits-item__text-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 279px;
+}
+.benefits-list .benefits-list__item .benefits-item__text-block .benefits-item__title {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 32px;
+  color: #292929;
+  margin-bottom: 18px;
+}
+.benefits-list .benefits-list__item .benefits-item__text-block:last-child {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #666666;
+}

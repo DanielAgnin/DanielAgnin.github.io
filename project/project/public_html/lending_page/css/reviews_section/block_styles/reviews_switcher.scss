@@ -1,0 +1,21 @@
+
+.reviews-block__reviews-switcher {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: rem(20px);
+
+    .rewiews-switcher__item {
+        margin-right: 10px;
+        height: 82px;
+        width: 82px;
+
+        &.active {
+            box-sizing: border-box;
+            border-radius: 100px;
+            border: 4px solid #365A49;
+            outline-offset: -4px;
+            transform: translate(-4px, -4px);
+        }
+    }
+}
