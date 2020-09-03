@@ -1,19 +1,21 @@
 /*Подключение normalize*/
 
-@import url("blocks/normalize.css");
+// @import url("blocks/normalize.css");
 
 
 /*Подключение шрифта*/
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100;300;400;500;700;800;900&display=swap");
 
 
 /*Задание переменных*/
 
 $blue: #61C4D9;
 /*Базовый  голубой цвет*/
-$baseFontSize: 18px;
+
+// $baseFontSize: 18px;
 /*Размер шрифта для основного текстового контента*/
+
 $darkGreen: #0b4d3c;
 /*Базовый тёмно-зелёный цвет*/
 
@@ -31,19 +33,19 @@ $phones: 480px;
 $smallPhones: 360px;
 
 @mixin tablets {
-    @media screen and (max-width: $tablets) {
+    @media screen and (max-width: 768px) {
         @content;
     }
 }
 
 @mixin phones {
-    @media screen and (max-width: $phones) {
+    @media screen and (max-width: 480px) {
         @content;
     }
 }
 
 @mixin smallPhones {
-    @media screen and (max-width: $smallPhones) {
+    @media screen and (max-width: 360px) {
         @content;
     }
 }
@@ -81,6 +83,28 @@ $smallPhones: 360px;
 @import "blocks/footer";
 
 
+@import "blocks/footer_menu";
+
+
+@import "blocks/radio";
+
+
+@import "blocks/ordering_block";
+@import "blocks/menu";
+@import "blocks/product_advantages";
+
+
+@import "blocks/reviews_display";
+@import "blocks/reviews_switcher";
+
+
+@import "blocks/accordeon.scss";
+
+
+@import "blocks/headline";
+@import "blocks/benefits";
+
+
 /*Подключение стилей для фиксированного меню*/
 
 @import "blocks/fixed_menu.scss";
@@ -90,18 +114,19 @@ $smallPhones: 360px;
 
 html {
     height: 100%;
-    font-size: $baseFontSize;
+    font-size: 18px;
+    font-family: "Alegreya Sans", sans-serif;
 
     @include tablets {
-        font-size: $baseFontSize - 1px;
+        font-size: 17px;
     }
 
     @include phones {
-        font-size: $baseFontSize - 4px;
+        font-size: 14px;
     }
 
     @include smallPhones {
-        font-size: $baseFontSize - 7px;
+        font-size: 11px;
     }
 }
 
@@ -121,6 +146,7 @@ body {
 
 .maincontent {
     height: 100%;
+    width: 100%;
     transform: translateY(0);
     transition: transform 0.7s;
     will-change: transform;
@@ -176,16 +202,17 @@ p {
 
 .section {
     height: 100%;
+    width: 100%;
 }
 
 .section--font-color--green {
     color: $darkGreen;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 .section-title {
     color: #292929;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: rem(48px);
@@ -203,7 +230,7 @@ p {
     border-radius: 100px;
     line-height: 1;
     text-decoration: none;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', sans-serif;
     user-select: none;
     border: none;
     outline: none;
@@ -253,7 +280,7 @@ p {
 }
 
 .hero__navigation-menu {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', sans-serif;
     font-size: rem(30px);
     position: fixed;
     height: 100%;
@@ -272,6 +299,7 @@ p {
         height: 20px;
         width: 20px;
         fill: white;
+        overflow: visible;
 
         &:hover {
             fill: $blue;

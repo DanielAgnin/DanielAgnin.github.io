@@ -1,11 +1,11 @@
 
-@import "../block_styles/accordeon.scss";
+// @import "../block_styles/accordeon.scss";
 
 .team {
     position: relative;
 
     &:before {
-        content: url("../images/blackberries.svg");
+        content: url("images/blackberries.svg");
         position: absolute;
         right: 1%;
         top: -4%;
@@ -17,7 +17,7 @@
     }
 
     &:after {
-        content: url("../images/berries_6.svg");
+        content: url("images/berries_6.svg");
         position: absolute;
         left: 1%;
         bottom: -5%;
@@ -62,7 +62,7 @@
         }
 
         .team__member {
-            font-family: 'Alegreya Sans';
+            font-family: 'Alegreya Sans', sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: rem(21px);
@@ -110,7 +110,7 @@
         margin-bottom: 10px;
 
         .team__member {
-            font-family: 'Alegreya Sans';
+            font-family: 'Alegreya Sans', sans-serif;
             font-style: normal;
             font-weight: bold;
             font-size: rem(21px);

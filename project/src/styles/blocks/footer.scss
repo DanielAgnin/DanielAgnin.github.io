@@ -1,5 +1,4 @@
 
-@import "../block_styles/footer_menu";
 
 .footer {
     height: 100vh;
@@ -16,7 +15,7 @@
 .footer__phone-number {
 
     &:before {
-        content: url("../images/phone_green.svg");
+        content: url("images/phone_green.svg");
     }
 }
 

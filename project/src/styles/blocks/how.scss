@@ -4,7 +4,7 @@
 
     &:before {
         position: absolute;
-        content: url("../images/blackberries_with_leaves.svg");
+        content: url("images/blackberries_with_leaves.svg");
         bottom: -10%;
         right: 0;
         z-index: 200;
@@ -27,7 +27,7 @@
 
     &:before {
         position: absolute;
-        content: url("../images/small_leaf.svg");
+        content: url("images/small_leaf.svg");
         top: 20%;
         right: 0;
 
@@ -38,7 +38,7 @@
 
     &:after {
         position: absolute;
-        content: url("../images/leaf_2.svg");
+        content: url("images/leaf_2.svg");
         bottom: 10%;
         left: 0;
 
@@ -81,12 +81,12 @@
                 position: absolute;
                 width: 100%;
                 height: 100%;
-                background-image: url("../images/video_background.png");
+                background-image: url("images/video_background.png");
                 background-size: cover;
                 cursor: pointer;
                 
                 &:before {
-                    content: url("../images/triangle.svg");
+                    content: url("images/triangle.svg");
                     position: absolute;
                     top: 35%;
                     left: 45%;
@@ -95,6 +95,12 @@
                     @include phones {
                         top: 20%;
                         left: 40%;
+                    }
+
+                    @include smallPhones {
+                        top: 20%;
+                        left: 40%;
+                        height: rem(70px);
                     }
                 }
             }
@@ -121,7 +127,7 @@
             .player__start {
                 width: rem(18px);
                 height: rem(18px);
-                background: url("../images/small_triangle.svg") no-repeat;
+                background: url("images/small_triangle.svg") no-repeat;
                 background-size: cover;
 
                 @include phones {
@@ -144,7 +150,7 @@
                 
                 .player__playback-button {
                     position: absolute;
-                    background: url("../images/regulator.svg") no-repeat;
+                    background: url("images/regulator.svg") no-repeat;
                     width: rem(15px);
                     height: rem(15px);
                     left: 0;
@@ -162,7 +168,7 @@
                 .player__volume-button {
                     width: rem(12px);
                     height: rem(15px);
-                    background: url("../images/volume.svg") no-repeat;
+                    background: url("images/volume.svg") no-repeat;
                     cursor: pointer;
 
                     &.muted {
@@ -179,7 +185,7 @@
 
                     .player__volume-playback--button {
                         position: absolute;
-                        background: url("../images/regulator.svg") no-repeat;
+                        background: url("images/regulator.svg") no-repeat;
                         width: rem(15px);
                         height: rem(15px);
                         left: 100%;
@@ -201,7 +207,7 @@
             .player__start {
                 width: rem(18px);
                 height: rem(18px);
-                background: url("../images/pause.svg") no-repeat;
+                background: url("images/pause.svg") no-repeat;
                 background-size: cover;
             }
         }

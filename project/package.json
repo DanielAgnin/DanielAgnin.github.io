@@ -1,5 +1,5 @@
 {
-  "name": "almost",
+  "name": "project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,33 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "gulp": "^4.0.2",
+    "jquery": "^3.5.1",
+    "mobile-detect": "^1.4.4",
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
-    "gulp": "^6.14.6",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "browser-sync": "^2.26.12",
+    "bxslider": "^4.2.14",
+    "cross-env": "^7.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rm": "^2.0.0",
     "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-uglify": "^3.0.2",
     "node-sass": "^4.14.1"
   }
 }
